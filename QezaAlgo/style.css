@@ -1,0 +1,13 @@
+div{
+	margin-top: 10%;
+	margin-left: 10%;	
+	margin-right: 10%;
+}
+
+#dernierDiv{
+	margin-bottom: 100px;
+}
+
+input{
+	min-width: 100%;
+}
