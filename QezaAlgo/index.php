@@ -1,6 +1,11 @@
 <?php
-    include 'fonctions.php';
-    $bdd = connexionBDD();
+session_start();
+$_SESSION['username'];
+
+
+include 'app/public/fonctionsAlgo.php';
+include 'app/public/menuPublic.php';
+$bdd = connexionBDD();
 ?>
 
 <!DOCTYPE html>
@@ -16,9 +21,11 @@
         <!-- Milligram CSS minified -->
         <link rel="stylesheet" href="http://cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
         <!-- Css Perso -->
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="pages/style/style.css">
     </head>
-
+    <?php
+    afficherMenuPublic();
+    ?>
     <body>
         <h1> Test Algo KEZA</h1>
 
