@@ -1,32 +1,21 @@
 <?php
-
-require '../../app/admin/auth/dBAuth.php';
-require '../../app/public/fonctionsAlgo.php';
+session_start();
 require '../../app/admin/menuAdmin.php';
-$db = connexionBDD();
+require '../../app/admin/auth/dBAuth.php';
 
 if (isConnect()){
-    afficherMenuAdmin();
-?>
-
-
-<h1> Voici ma page d'accueil admin </h1>
-
-
+    MenuAdmin("page d'accueil administarteur");
+    $db = connexionBDD();
+    ?>
+        <h1> Accueil espace administrateur </h1>
 
 
 
 
 
 
-
-
-
-
-
-
-
-<?php
+    <?php
+    FooterAdmin();
 }
 else{
     header( 'location: login.php');

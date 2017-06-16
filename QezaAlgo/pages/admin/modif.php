@@ -1,26 +1,13 @@
 <?php
-
-require '../../app/admin/auth/dBAuth.php';
-require '../../app/public/fonctionsAlgo.php';
+session_start();
 require '../../app/admin/menuAdmin.php';
-$db = connexionBDD();
+require '../../app/admin/auth/dBAuth.php';
 
 if (isConnect()){
-    afficherMenuAdmin();
-
-?>
-
-
-    <h1> Voici ma page de modification de smartphones </h1>
-
-
-
-
-
-
-
-
-
+    MenuAdmin('Modification de smartphones');
+    $db = connexionBDD();
+    ?>
+        <h1> Modification de smartphones </h1>
 
 
 
@@ -28,6 +15,7 @@ if (isConnect()){
 
 
     <?php
+    FooterAdmin();
 }
 else{
     header( 'location: login.php');

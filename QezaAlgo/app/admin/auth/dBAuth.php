@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 function formulaireConnexion(){
     ?>
@@ -20,19 +19,32 @@ function connexionAdmin($username, $password, $bdd){
     $donnees = $req->fetch();
     if ($username and $password){
         if ($donnees['mdpUser'] == $password) {
-            $_SESSION['username'] = $username;
-            return true;
+            $_SESSION['log'] = true;
+            var_dump($_SESSION);
+            ?><meta http-equiv="refresh" content="0,URL=/pages/admin/home.php"><?php
+        }
+        else{
+            echo 'Identifiants incorrects';
         }
     }
-
-    return false;
+    else{
+        echo 'Identifiants incorrects';
+    }
 }
 
 function isConnect(){
-    if ($_SESSION['username']){
-        return true;
+    if (isset($_SESSION)){
+        if ($_SESSION['log']){
+            return true;
+        }
     }
     return false;
+}
+
+function deconnect(){
+    $_SESSION['log'] = false;
+    session_destroy();
+    header('location:../../index.php');
 }
 
 

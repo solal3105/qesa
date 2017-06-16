@@ -13,7 +13,14 @@ require 'Phone.php';
  * @return PDO
  * Connecte a la base de données retourne le PDO
  */
-function connexionBDD(){
+function connexionBDDWindows(){
+
+    return $bdd = new PDO('mysql:host=localhost;dbname=keza;charset=utf8', 'root', '');
+
+
+}
+
+function connexionBDDMac(){
     try
     {
         // On se connecte à MySQL
@@ -26,8 +33,13 @@ function connexionBDD(){
     }
 }
 
-
-
+function connexionBDD(){
+    if (connexionBDDWindows()){
+        return connexionBDDWindows();
+    } else{
+        connexionBDDMac();
+    }
+}
 /**
  * @param $bdd Objet de type PDO
  */
