@@ -15,7 +15,7 @@ require 'Phone.php';
  */
 function connexionBDDWindows(){
 
-    return $bdd = new PDO('mysql:host=localhost;dbname=keza;charset=utf8', 'root', '');
+    return $bdd = new PDO('mysql:host=localhost;dbname=qeza;charset=utf8', 'root', '');
 
 
 }
@@ -24,7 +24,7 @@ function connexionBDDMac(){
     try
     {
         // On se connecte à MySQL
-        return $bdd = new PDO('mysql:host=localhost;dbname=keza;charset=utf8', 'root', 'root');
+        return $bdd = new PDO('mysql:host=localhost;dbname=qeza;charset=utf8', 'root', '');
     }
     catch(Exception $e)
     {

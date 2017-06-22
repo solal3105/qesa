@@ -11,7 +11,7 @@ afficherMenuPublic('Index');
 ?>
 
 
-<h1> Test Algo KEZA</h1>
+<h1> Test Algo QEZA</h1>
 
 <!-- Affichage de tous les téléphones présents dans la bdd -->
 <div>
