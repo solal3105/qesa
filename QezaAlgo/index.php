@@ -6,17 +6,9 @@ require 'app/admin/auth/dBAuth.php';
 include 'app/public/fonctionsAlgo.php';
 include 'app/public/menuPublic.php';
 $bdd = connexionBDD();
-
+afficherHeaderPublic('Index');
 afficherMenuPublic('Index');
 ?>
-
-
-<h1> Test Algo QEZA</h1>
-
-<!-- Affichage de tous les téléphones présents dans la bdd -->
-<div>
-    <?php lireBDD($bdd) ?>
-</div>
 
 <div>
     <form method="post" action="index.php">

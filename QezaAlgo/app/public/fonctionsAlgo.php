@@ -40,6 +40,8 @@ function connexionBDD(){
         connexionBDDMac();
     }
 }
+
+
 /**
  * @param $bdd Objet de type PDO
  */
