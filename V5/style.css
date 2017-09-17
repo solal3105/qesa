@@ -116,3 +116,11 @@ input[type="submit"]:hover{
 	height: 60%;
 }
 #note{text-align: center;}
+
+@media screen and (max-width: 1000px){
+	#colonne_gauche{
+		background-color: red;
+		width: 100vw;
+	}
+
+}
