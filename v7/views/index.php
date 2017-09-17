@@ -3,7 +3,9 @@
 
 <!--  Début de la page -->
 <body>
+
 	<div id="colonne_gauche">
+	<img src="<?= PATH_ASSETS ?>images/logo.png" id="logo">
 	<h1>Qeza</h1>
 <!--  Sliders -->
 	<label>Performances
