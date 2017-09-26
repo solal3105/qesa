@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:100,300);
+*{
+	font-family: 'Josefin Sans', sans-serif;
+	transition-duration: 0s;
+	margin: 0;
+	padding: 0;
+}
+html{
+	background: url(../img/wallpaper.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+}
+
+#menu, #menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#menu {
+/* on centre le menu dans la page */
+    text-align: right;
+    padding-right: 80px;
+    background-color: #000;
+    height: 50px;
+}
+#menu {
+/* on centre le menu dans la page */
+    text-align: right;
+    padding-right: 80px;
+    background-color: #000;
+    height: 50px;
+}
+#menu li {
+/* on place les liens du menu horizontalement */
+    display: inline-block;
+}
+#menu ul li {
+/* on enlève ce comportement pour les liens du sous menu */
+    display: inherit;
+}
+#menu a {
+    text-decoration: none;
+    display: block;
+	color:#fff;
+	font-size: 24px;
+	margin: 10px 20px 0 20px;
+
+}
+#menu ul {
+    position: absolute;
+/* on cache les sous menus complètement sur la gauche */
+    left: -999em;
+    text-align: left;
+    z-index: 1000;
+}
+
+#menu li:hover ul {
+/* Au survol des li du menu on replace les sous menus */
+    left: auto;
+}
+#menu ul li a{
+	background-color:  rgba(0,0,0,0.5);
+	margin: 0;
+	padding: 10px;
+	left: 0px
+}
+
+#surcouche{
+display: none;
+position: fixed;               
+top: 0; right:0; bottom:0; left: 0;
+background-color: rgba(0, 0, 0, 0.2);
+z-index : 1000;
+}
+#case{
+    display : none;
+}
+#case:checked + #surcouche{
+    display: block;
+}
+label{
+    cursor: pointer;
+}
+.labelButon1,.labelButon2{
+    padding: 5px 10px;
+
+    color : #3636A3;
+	border: 1px solid #3636A3;
+    position: relative;
+    text-decoration: none;
+    margin-left: 0;
+    z-index: 1005;
+}
+.labelButon2{
+    background-color: #3636A3;
+    color : #fff;
+	border: 1px solid #3636A3;
+	margin-left: 280px;
+}
+#msgbox{
+    width: 300px;
+    height: auto;
+    padding: 15px;
+    position: absolute;
+    top: 25%;
+    left: 34%;
+    background-color: white;
+}

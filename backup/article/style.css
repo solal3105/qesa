@@ -1,0 +1,75 @@
+@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:200,300,400,700);
+*{margin: 0;
+padding: 0;}
+html {
+  background: url(../img/wallpaper.jpg) no-repeat center fixed;
+  margin: 0;
+  padding: 0;
+}
+#article{
+  width: 900px;
+  height: auto;
+  background-color: rgba(255,255,255,0.8);
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  position: relative;
+  top: 50px;
+}
+
+#banniere{
+  height: 306px;
+  background: url(../img/v6.jpg);
+  background-size: 100% auto;
+  filter: brightness(40%);
+  -webkit-filter: brightness(40%);
+  -moz-filter: brightness(40%);
+  -o-filter: brightness(40%);
+  -ms-filter: brightness(40%);
+}
+
+img{width: 100%;
+position: relative;
+top: -120px;
+-webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover;
+}
+h1{
+  font-family: 'Raleway';
+  font-weight: 700;
+  position: relative;
+  top: -306px;
+  color: #fff;
+  font-size: 54px;
+  margin: 20px 50px 10px 20px;
+}
+h2,h3,h4,p,h6{font-family: 'Raleway';
+color: #000;
+position: relative;
+  top: -140px;
+margin: 20px 50px 10px 20px;}
+h2{font-size: 34px;
+  font-weight: 500; }
+h3{font-size: 24px;
+  font-weight: 400; }
+h4{font-size: 24px;
+  font-weight: 400;}
+p{font-family: 'Raleway';
+  font-weight: 300;}
+h6{font-size: 24px;
+  border-top: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+font-weight: 700;
+font-style: italic;
+text-align: center;
+padding: 15px;
+margin: 15px;}
+
+  @media screen and (max-width: 900px) {
+    #article{
+    width: 100%;
+    top: 0px
+    }
+
+}

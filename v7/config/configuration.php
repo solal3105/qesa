@@ -1,9 +1,9 @@
 <?php
 
 // Accès base de données
-const BD_HOST = '';
-const BD_DBNAME = '';
-const BD_USER = '';
+const BD_HOST = 'localhost';
+const BD_DBNAME = 'keza';
+const BD_USER = 'root';
 const BD_PWD = '';
 
 //Langues
