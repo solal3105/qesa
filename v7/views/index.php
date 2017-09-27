@@ -11,18 +11,19 @@
 		<br>
 		<label> <?= CRITERE_PERF ?>
 			<br>
-			<input type="range" name="performance" min="0" max="10">
-			
+			<input type="range" name="performance" min="0" max="10" value="<?php echo $performance; ?>
+">
+						
 		</label>
 		<br>
 		<label> <?= CRITERE_AUTONOMIE ?>
 			<br>
-			<input type="range" name="Batterie" min="0" max="10">
+			<input type="range" name="Batterie" min="0" max="10" value="<?php echo $batterie; ?>">
 		</label>
 		<br>
             <label> <?= CRITERE_PHOTO ?>
 			<br>
-			<input type="range" name="photo" min="0" max="10">
+			<input type="range" name="photo" min="0" max="10" value="<?php echo $photo; ?>">
 		</label>
 		<br>
 		<label> <?= CRITERE_BUDGET ?>
