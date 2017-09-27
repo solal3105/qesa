@@ -11,18 +11,19 @@
 		<br>
 		<label>Performance
 			<br>
-			<input type="range" name="performance" min="0" max="10">
-			
+			<input type="range" name="performance" min="0" max="10" value="<?php echo $performance; ?>
+">
+						
 		</label>
 		<br>
 		<label>Batterie
 			<br>
-			<input type="range" name="Batterie" min="0" max="10">
+			<input type="range" name="Batterie" min="0" max="10" value="<?php echo $batterie; ?>">
 		</label>
 		<br>
 		<label>Photos
 			<br>
-			<input type="range" name="photo" min="0" max="10">
+			<input type="range" name="photo" min="0" max="10" value="<?php echo $photo; ?>">
 		</label>
 		<br>
 		<label>Budget
