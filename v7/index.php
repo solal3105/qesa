@@ -2,6 +2,7 @@
 
 // Initialisation des paramètres du site
 require_once('./config/configuration.php');
+require_once(PATH_TEXTES.LANG.'.php');
 
 //vérification de la page demandée 
 if(isset($_GET['page']))
