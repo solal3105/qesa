@@ -7,8 +7,7 @@ function afficherHeaderPublic($nomPage){
         <title><?php echo $nomPage ?></title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-        <link rel="stylesheet" href="http://cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
-        <link rel="stylesheet" type="text/css" href="/pages/style/style.css">
+        <link rel="stylesheet" type="text/css" href="http://localhost/qeza/QezaAlgo/pages/style/style.css">
     </head>
 
 <?php

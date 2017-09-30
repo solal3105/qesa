@@ -149,9 +149,9 @@ function calculPoints($bdd){
         $autonomie = $_POST['batterieRange'];
         $prix = $_POST['prixMax'];
 
-        echo "perfs : " . $perfs . " -- photo : " . $photo . " -- autonomie : " . $autonomie;
+        echo "perfs : " . $perfs . "photo : " . $photo . "autonomie : " . $autonomie;
 
-        $req = $bdd->prepare('SELECT * FROM phone WHERE prix < ?');
+        $req = $bdd->prepare('SELECT * FROM phone WHERE prix <= ?');
         $req->execute(array($prix));
 
 

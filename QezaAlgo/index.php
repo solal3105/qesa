@@ -10,7 +10,7 @@ afficherHeaderPublic('Index');
 afficherMenuPublic('Index');
 ?>
 
-<div>
+<main>
     <form method="post" action="index.php">
      <p> Performances : </p>
         <input type="range" value="0" min="0" max="10" step="1" name="perfRange">
@@ -20,14 +20,13 @@ afficherMenuPublic('Index');
         <input type="range" value="0" min="0" max="10" step="1" name="batterieRange">
      <p> Prix max : </p>
         <input type="number" value="0" min="0" max="1500" step="50" name="prixMax">
-    <p> </p>
         <input type="submit" value="GO" name="boutonValider">
     </form>
 </div>
 
-<div id="dernierDiv">
+<div id="affichageTelephones">
     <?php calculPoints($bdd); ?>
 </div>
 
 <?php
-afficherFooterPublic();
+afficherFooterPublic('Index');
