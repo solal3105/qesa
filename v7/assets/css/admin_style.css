@@ -1,0 +1,26 @@
+li{
+	display: block;
+}
+ul{
+	margin: 30px;
+}
+
+.icon-table{
+	height: 20px;
+	width: 20px;
+	margin: 0 10px;
+}
+
+a.icon-table{
+	margin: 0 10px;
+}
+
+#tableau-telephones{
+	width: 70%;
+	display: block;
+	margin: auto;
+}
+
+#form_taille{
+	width: 5%;
+}
