@@ -3,14 +3,14 @@ require_once(PATH_MODELS."DAO.php");
 
 class TelephoneDAO extends DAO{
 	public function getTel($tri = NULL){
-		if ($tri != NULL) {
+		if ($tri == 'annee_sortie') {
+			$res = $this->queryAll("SELECT * FROM telephones WHERE pertinence = 1 ORDER BY  annee_sortie DESC, mois_sortie DESC");
+		}
+		elseif ($tri != NULL) {
 			$res = $this->queryAll("SELECT * FROM telephones WHERE pertinence = 1 ORDER BY $tri ASC");
 		}
 		else{
 			$res = $this->queryAll("SELECT * FROM telephones WHERE pertinence = 1");
-		}
-		if ($tri == 'annee_sortie') {
-			$res = $this->queryAll("SELECT * FROM telephones WHERE pertinence = 1 ORDER BY mois_sortie DESC, annee_sortie DESC");
 		}
 		if($res){
 			return $res;

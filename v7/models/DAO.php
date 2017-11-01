@@ -40,6 +40,21 @@ abstract class DAO{
 		return $res;
 	}
 
+	public function queryRowIns($sql, $args = NULL){
+		try {
+			$pdos = $this->_requete($sql,$args);
+			$res = $pdos;
+			$pdos->closeCursor();
+		} catch (PDOException $e) {
+			if ($this->_debug) {
+				die($e->getMessage());
+			}
+			$this->_erreur = 'query';
+			$res = false;
+		}
+		return $res;
+	}
+
 	//retourne un tableau 2D ou false
 	public function queryAll($sql,$args = NULL){
 		try {
