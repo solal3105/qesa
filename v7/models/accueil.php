@@ -23,3 +23,23 @@ if(isset($_POST['nom'])){
 	}
 	
 }	
+
+?>
+
+<script type="text/javascript">
+	function subForm(n){
+		if (n==1){
+			document.getElementById('persona').value='photographie';
+		}
+		else if(n==2){
+			document.getElementById('persona').value='autonomie';
+		}
+		else if(n==3){
+			document.getElementById('persona').value='performance';
+		}
+		else if(n==4){
+			document.getElementById('persona').value='personalise';
+		}
+		document.getElementById('formulaire').submit();
+	}
+</script>
