@@ -1,3 +1,6 @@
+h1,h2,a{
+	font-family: 'Montserrat', sans-serif;
+}
 body{
 	height: 100vh;
 	width: 100%;
@@ -10,6 +13,7 @@ body{
   	-moz-box-shadow: 0px 0px 50px #888; 
   	-webkit-box-shadow: 0px 0px 50px #888;
   	float: left;
+  	padding: 20px;
 }
 #colonne_droite h1{
 	font-weight: 800;
@@ -27,17 +31,9 @@ body{
 	width: 50%;
 	padding: 0 5%;
 }
-#colonne_droite input{
+#colonne_droite input[type='range']{
 	max-width: 500px;
 	width: 100%;
-}
-.btn_secondaire{
-	background-color: white;
-	border: 2px solid #90d051;
-	border-radius: 25px;
-	padding: 5px 15px;
-	margin: 10px 20px;
-	display: inline-block;
 }
 a.btn_secondaire{
 	font-size: 30px;
@@ -49,10 +45,16 @@ img#logo{
 	display: block;
 	margin: auto;
 }
-#espacement{
-	height: 25px;
-}
 #colonne_droite a.btn_principal{
 	margin: 40px 0;
 	max-width: 500px;
+}
+#result{
+	border: 0px;
+	width: auto;
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+
 }

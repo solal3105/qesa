@@ -43,3 +43,4 @@ if(isset($_POST['nom'])){
 		document.getElementById('formulaire').submit();
 	}
 </script>
+

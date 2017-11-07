@@ -1,6 +1,4 @@
-<?php
-
-require_once(PATH_VIEWS.'personas.php');
+<?php require_once(PATH_MODELS.'personas.php');
 
 if($_POST['persona']=='photographie'){
 	$_SESSION['photographie']=9;
@@ -22,7 +20,6 @@ if($_POST['persona']=='personalise'){
 	$_SESSION['autonomie']=2;
 	$_SESSION['performance']=2;
 }
-if(isset($_POST['photographie']){
-	$_POST['photographie']=0;
-}
+
+require_once(PATH_VIEWS.'personas.php');
 ?>
