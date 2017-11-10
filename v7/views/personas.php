@@ -24,7 +24,7 @@
      <input name="sum2" value="<?= $_SESSION['performance']; ?>" id="op2" onChange="calc(this.value,'op1','op3','result')" type="range" min="0" max="10" data-highlight="true" /> 
 	<h2>Autonomie</h2>
      <input name="sum3" value="<?= $_SESSION['autonomie']; ?>" id="op3" onChange="calc(this.value,'op1','op2','result')" type="range" min="0" max="10" data-highlight="true" />
- 	<br><a href="#">Lancer la recherche</a>
+ 	<br><a href="?page=resultats">Lancer la recherche</a>
 </div>
 
 
