@@ -70,4 +70,19 @@ abstract class DAO{
 		}
 		return $res;
 	}
+
+	public function queryAllIns($sql,$args = NULL){
+		try {
+			$pdos = $this->_requete($sql,$args);
+			$res = $pdos;
+			$pdos->closeCursor();
+		} catch (PDOException $e) {
+			if ($this->_debug) {
+				die($e->getMessage());
+			}
+			$this->_erreur = 'query';
+			$res = false;
+		}
+		return $res;
+	}
 }

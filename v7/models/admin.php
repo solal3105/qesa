@@ -44,4 +44,10 @@ class TelephoneDAO extends DAO{
 		}
 		submitTelForm();
 	}
+	function supprimer(id){
+		if (confirm("êtes vous sur de supprimer ce telephone ?")){
+			var redirect = '?page=suppression&IDtel='+id;
+			location.href=redirect;
+		}
+	}
 </script>

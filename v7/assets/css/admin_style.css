@@ -11,6 +11,10 @@ form ul{
 	margin: 0;	
 }
 
+#suppr{
+	cursor: pointer;
+}
+
 a.icon-table{
 	margin: 0 10px;
 }

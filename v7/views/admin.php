@@ -37,15 +37,15 @@ foreach ($tel as $key1 => $value1) {
 	?>
 			<tr <?= ($value1['note'] == 1)? '' : 'class="non_note"' ?> >
 			<td>
-				<a href="">
+				<a href="?page=admin_modif&IDtel=<?= $value1['ID'] ?>">
 					<img src="<?=PATH_IMAGES?>admin/modifier.png" class="icon-table" alt="icone stylo modifier">
 				</a>
 				<a href="?page=admin_note&IDtel=<?= $value1['ID'] ?>">
 					<img src="<?=PATH_IMAGES?>admin/rating.png" class="icon-table" alt="icone etoile rating">
 				</a>
-				<a href="">
+				<i id="suppr" onclick="supprimer(<?= $value1['ID'] ?>);">
 					<img src="<?=PATH_IMAGES?>admin/delete.png" class="icon-table" alt="icone croix supprimer">
-				</a>
+				</i>
 			</td>
 				<?php
 				foreach ($colonnesBdd as $key2 => $value2) { 
@@ -84,3 +84,4 @@ foreach ($tel as $key1 => $value1) {
 		</form>
 </div>
 </section>
+<?php require_once(PATH_VIEWS.'footer.php');
