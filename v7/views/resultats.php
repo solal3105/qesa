@@ -11,14 +11,16 @@
 		<input type="button" class="btn-hover btn_secondaire" value="Budget :"  name="photographie" onclick="">
 		<input type="button" class="btn-hover btn_secondaire" value="Trier par :"  name="photographie" onclick="">
 	</div>
-<body>
+<div id="conteneur">
 	<?php for ($i=0; $i < 100; $i++) { 
 	?>
 	<div class="telephone">
+		<?php $n=rand(1, 4); ?>
 		<h2>Nom du telephone</h2>
-		<img src="assets\images\telephone <?php echo rand(1, 4)  ; ?>.png">
+		<img src="assets\images\telephone <?php echo $n; ?>.png">
 		<p class="prix">499€</p>
 		<p class="note">88/100</p>
 	</div>
 	<?php } ?>
+	</div>
 </body>
