@@ -10,22 +10,9 @@ header{
 	display: block;
 	width: 100%;
 	box-shadow: 0 4px 15px 0 rgba(0,0,0, 0.25);
-	height: 90px;
-	float: left;
+	padding: 20px;
 	margin-bottom: 30px;
-}
-input.btn_secondaire,input.btn_principal{
-	width: 220px;
-	margin: 20px;
-}
-body{
-	margin: auto;
-	width: 100%;
-}
-input.btn_secondaire{
-	float: right;
-text-align: left;
-padding-left: 20px;
+	overflow:auto;
 }
 .telephone{
 	width: 23%;
@@ -34,10 +21,10 @@ padding-left: 20px;
 	padding: 1%;
 	transition: 0.3s;
 	border-radius: 20px;
+	background-color: #fff;
 }
 .telephone img{
 	width: 100%;
-	background-color: #fff;
 }
 .telephone h2{
 	font-family: 'Montserrat', sans-serif;
@@ -61,7 +48,7 @@ padding-left: 20px;
 .prix, .note{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 800;
-	margin: 30px 10px;
+	margin: 10px 10px 10px 0;
 	border: 2px solid #25aae1;
 	display: inline-block;
 	border-radius: 20px;
@@ -69,4 +56,51 @@ padding-left: 20px;
 	font-size: 30px;
 	box-shadow: 0 0px 15px 0 rgba(0,0,0, 0.35);
 		
+}
+.bouton_sous_menu{
+	display: inline-block;
+	float: right;
+	border-radius: 40px;
+	background-image: linear-gradient(to right, #25aae1, #40e495);
+	box-shadow: 0 0px 15px 0 rgba(0,0,0, 0.35);
+	font-weight: 600;
+	font-size:  20px;
+	margin-right: 20px;
+
+}
+.bouton_sous_menu select,.bouton_sous_menu input {
+	margin: 20px 20px 20px 10px;
+	padding: 10px;
+	border: 0;
+
+}
+#recherche{
+	float: left;
+	padding: 30px;
+	border: 0;
+	background-image: linear-gradient(to right,#667eea, #764ba2);
+	box-shadow: 0 0px 15px 0 rgba(0,0,0, 0.35);
+	color: #fff;
+}
+p{display: inline;
+font-family: 'Montserrat', sans-serif;
+padding-left: 10px;
+}
+@media screen and (max-width: 600px){
+	.telephone{
+		width: 98%;
+		padding-bottom: 30px;
+	}
+	#recherche{
+		width: 90%;
+		margin: 0%;
+		position: fixed;
+		bottom: 20px;
+		z-index: 1;
+	}
+	.bouton_sous_menu{
+		width: 90%;
+		margin: 5%;
+		padding:0;
+	}
 }

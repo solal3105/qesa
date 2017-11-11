@@ -7,9 +7,18 @@
 </header>
 <body>
 	<div id="sous_menu">
-		<input type="button" class="btn-hover btn_principal" value="Modifier la recherche"  name="photographie" onclick="">
-		<input type="button" class="btn-hover btn_secondaire" value="Budget :"  name="photographie" onclick="">
-		<input type="button" class="btn-hover btn_secondaire" value="Trier par :"  name="photographie" onclick="">
+		<input type="button" class="bouton_sous_menu" value="Modifier les critères"  name="modifier la recherche" id="recherche">
+		<div id="budget" class="bouton_sous_menu">
+			<p>Budget :</p>
+			<input type="number" name="budget" onclick="" step="5">
+		</div>
+		<div id="trier" class="bouton_sous_menu">
+			<p>Trier par :</p>
+			<select name="trier" class="">
+				<option value="prix">Prix</option>
+				<option value="note" selected>Note</option>
+			</select>
+		</div>
 	</div>
 <div id="conteneur">
 	<?php for ($i=0; $i < 100; $i++) { 
@@ -18,8 +27,8 @@
 		<?php $n=rand(1, 4); ?>
 		<h2>Nom du telephone</h2>
 		<img src="assets\images\telephone <?php echo $n; ?>.png">
-		<p class="prix">499€</p>
-		<p class="note">88/100</p>
+		<p class="prix"><?= 200+rand(1, 800); ?>€</p>
+		<p class="note"><?= 100-$i; ?>/100</p>
 	</div>
 	<?php } ?>
 	</div>

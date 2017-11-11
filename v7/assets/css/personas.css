@@ -99,3 +99,15 @@ p{
     background-image: linear-gradient(to right,#fff, #fff, #fff, #fff);
     box-shadow: 0 4px 15px 0 rgba(0,0,0, 0.25);
 }
+
+@media screen and (max-width: 600px){
+	#colonne_gauche{
+		display: none;
+	}
+	#colonne_droite{
+		width: 90%;
+		margin: 5%;
+		padding: 5%;
+	}
+
+}
