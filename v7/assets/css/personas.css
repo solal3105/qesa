@@ -1,15 +1,19 @@
+h1,h2,a{
+	font-family: 'Montserrat', sans-serif;
+}
 body{
 	height: 100vh;
 	width: 100%;
 }
 #colonne_gauche{
 	width: 40%;
-	max-width: 500px;
 	background-color: #fff;
 	height: 100vh;
   	-moz-box-shadow: 0px 0px 50px #888; 
   	-webkit-box-shadow: 0px 0px 50px #888;
   	float: left;
+  	padding: 20px;
+  	max-width: 400px;
 }
 #colonne_droite h1{
 	font-weight: 800;
@@ -25,19 +29,10 @@ body{
 #colonne_droite{
 	float: left;
 	width: 50%;
-	padding: 0 5%;
+	margin: 0 5%;
 }
-#colonne_droite input{
-	max-width: 500px;
+#colonne_droite input[type='range']{
 	width: 100%;
-}
-.btn_secondaire{
-	background-color: white;
-	border: 2px solid #90d051;
-	border-radius: 25px;
-	padding: 5px 15px;
-	margin: 10px 20px;
-	display: inline-block;
 }
 a.btn_secondaire{
 	font-size: 30px;
@@ -47,12 +42,60 @@ a.btn_secondaire{
 img#logo{
 	width: 250px;
 	display: block;
-	margin: auto;
-}
-#espacement{
-	height: 25px;
+	margin: 40px auto;
 }
 #colonne_droite a.btn_principal{
 	margin: 40px 0;
-	max-width: 500px;
+}
+#result{
+	border: 0px solid black;
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+	width: 70px;
+
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #25aae1, #40e495);
+  border-radius: 10px;
+  height: 20px;
+  box-shadow: 0 4px 15px 0 rgba(0,0,0, 0.25);
+}
+
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 30px;
+    width: 30px;
+    background: rgba(255,255,255,1);
+    box-shadow: 0 0px 15px 0 rgba(0,0,0, 0.5);
+    border-radius: 15px;
+    position: relative;
+    bottom: 5px;
+}
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+a#rechercher {
+    background-image:linear-gradient(to right,#667eea, #764ba2);
+    box-shadow: 0 4px 15px 0 rgba(0,0,0, 0.25);
+    display: block;
+    padding: 5px;
+    border-radius: 30px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+p{
+	margin:10px;
+	padding: 0;
+	font-weight: 600;
+}
+.btn-hover.btn_principal {
+    background-image: linear-gradient(to right,#fff, #fff, #fff, #fff);
+    box-shadow: 0 4px 15px 0 rgba(0,0,0, 0.25);
 }

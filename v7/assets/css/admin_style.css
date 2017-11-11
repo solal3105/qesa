@@ -1,0 +1,76 @@
+form li{
+	display: block;
+}
+form ul{
+	margin: 30px;
+}
+
+.icon-table{
+	height: 13px;
+	width: 13px;
+	margin: 0;	
+}
+
+#suppr{
+	cursor: pointer;
+}
+
+a.icon-table{
+	margin: 0 10px;
+}
+
+#options-tab{
+	display: block;
+	width: 80%;
+	margin: auto;
+}
+
+#form_taille{
+	width: 100%;
+}
+
+#numeroPage{
+	width: 10%;
+}
+
+.sub-table{
+	display: inline;
+	width: auto;
+}
+
+.non_note{
+	background-color: #eee;
+}
+.verif_note{
+	background-color: #2ecc71;
+}
+nav{
+	box-shadow: 0px 0px 50px #aaa;
+	display: block;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	background-color: #fff;
+}
+header{
+	height: 120px;
+}	
+
+nav ul{
+	padding: 20px;	
+	margin: 0;
+
+}
+nav li{
+	list-style-type: none;
+	margin-left: 20px;
+}
+table{
+
+	min-width: 90%;
+	max-width: 90%;
+	margin: auto;
+}
+.boutons-table{
+	margin-left: 40px;
+}
