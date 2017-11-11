@@ -6,7 +6,7 @@
 		if (isNaN(two)) { alert('Invalid entry: '+B); two=0; } 
 		var three = Number(document.getElementById(C).value);  
 		if (isNaN(two)) { alert('Invalid entry: '+C); three=0; } 
-		document.getElementById(SUM).value = ((one + two + three)/15)*100;
+		document.getElementById(SUM).value = (15-(one + two + three));
 	}
 		function subForm(n){
 		if (n==1){
