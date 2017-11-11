@@ -23,4 +23,12 @@
 		}
 		document.getElementById('formulaire').submit();
 	}
+
+	function calcPts(c1, c2, c3, afficheSum){
+		var nbPoints1 = document.getElementById(c1).value;
+		var nbPoints2 = document.getElementById(c2).value;
+		var nbPoints3 = document.getElementById(c3).value;
+
+		document.getElementById(afficheSum).value = (15 - nbPoints1 - nbPoints2 - nbPoints3);
+	}
 </script>

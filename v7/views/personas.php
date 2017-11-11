@@ -2,7 +2,7 @@
 	<link href="<?= PATH_CSS ?>personas.css" rel="stylesheet">
 </head> 
 <!--  Début de la page -->
-<body>
+<body onload="calcPts('op1','op2','op3','result');">
 <div id="colonne_gauche">
 	<div id="espacement"></div>
 	<a href="#">
@@ -24,9 +24,11 @@
      <input name="sum2" value="<?= $_SESSION['performance']; ?>" id="op2" onChange="calc(this.value,'op1','op3','result')" type="range" min="0" max="10" data-highlight="true" /> 
 	<h2>Autonomie</h2>
      <input name="sum3" value="<?= $_SESSION['autonomie']; ?>" id="op3" onChange="calc(this.value,'op1','op2','result')" type="range" min="0" max="10" data-highlight="true" />
- 	<h2> </h2>
+ 	<h2> </h2>
  	<a href="?page=resultats" id="rechercher"><p>Lancer la recherche</p></a>
 </div>
+
+
 
 
 
