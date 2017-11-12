@@ -5,7 +5,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font-family: 'Montserrat', sans-serif;
 }
 
-
 img#logo{
 	max-width: 100%;
 	display: block;
@@ -64,3 +63,4 @@ img#logo{
 .btn-hover.btn_principal:hover,.btn-hover.btn_secondaire:hover{
     box-shadow: 0 4px 15px 0 rgba(0,0,0, 0.5);
 }
+#espacement{margin: 50px;}

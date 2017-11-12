@@ -11,6 +11,7 @@
 		<div id="budget" class="bouton_sous_menu">
 			<p>Budget :</p>
 			<input type="number" name="budget" onclick="" step="5">
+			<i class="fa fa-eur" aria-hidden="true"></i>
 		</div>
 		<div id="trier" class="bouton_sous_menu">
 			<p>Trier par :</p>

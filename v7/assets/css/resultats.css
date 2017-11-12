@@ -72,7 +72,10 @@ header{
 	margin: 20px 20px 20px 10px;
 	padding: 10px;
 	border: 0;
-
+}
+.bouton_sous_menu input{
+	margin: 20px 0 20px 10px;
+	text-align: right;
 }
 #recherche{
 	float: left;
@@ -82,9 +85,41 @@ header{
 	box-shadow: 0 0px 15px 0 rgba(0,0,0, 0.35);
 	color: #fff;
 }
-p{display: inline;
+.bouton_sous_menu p,i{display: inline;
 font-family: 'Montserrat', sans-serif;
 padding-left: 10px;
+color: #fff;
+}
+i{
+	padding-left: 0;
+	padding-right: 20px;
+}
+input[type="number"], select{
+	background-color: unset;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+	max-width: 100px;
+	background-color: rgba(0,0,0,0.1);
+}
+@media screen and (max-width: 1200px){
+	.telephone{
+		width: 48%;
+		padding-bottom: 30px;
+	}
+	#recherche{
+		width: 90%;
+		margin: 5%;
+		position: fixed;
+		bottom: 20px;
+		z-index: 1;
+	}
+	.bouton_sous_menu{
+		width: 42.5%;
+		margin: 2.5%;
+		padding:0;
+	}
 }
 @media screen and (max-width: 600px){
 	.telephone{
