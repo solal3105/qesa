@@ -122,12 +122,13 @@ input[type="number"], select{
 	}
 }
 @media screen and (max-width: 600px){
+
 	.telephone{
 		width: 98%;
 		padding-bottom: 30px;
 	}
 	#recherche{
-		width: 90%;
+		width: 100%;
 		margin: 0%;
 		position: fixed;
 		bottom: 20px;
@@ -137,5 +138,19 @@ input[type="number"], select{
 		width: 90%;
 		margin: 5%;
 		padding:0;
+	}
+	#budget, #trier{
+		width: 90%;
+		margin: 20px 5%;
+		padding:0;
+	}
+	#sous_menu{
+		margin: 0;
+		padding:0;
+	}
+	.bouton_sous_menu{
+		margin: 0;
+		padding: 0;
+		border-radius: 20px;
 	}
 }

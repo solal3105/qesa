@@ -23,7 +23,7 @@ body{
 	font-weight: 800;
 	font-size: 28px;
 	text-align: left;
-	margin: 80px 0;
+	margin: 40px 0;
 }
 #colonne_droite h2{
 	font-weight: 600;
@@ -113,5 +113,9 @@ p{
 		margin: 5%;
 		padding: 5%;
 	}
+i{
+	min-width: 30px;
+	text-align: center;
+}
 
 }

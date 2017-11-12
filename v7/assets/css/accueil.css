@@ -28,43 +28,15 @@ body{
 }
 .iphone-x {
   height: 724px;
-  width: 357px;
-  background-image: -webkit-linear-gradient(top, white 0%, white 1%, black 2%, white 5%, white 95%, black 98%, white 99%, white 100%);
-  background-image: linear-gradient(top, white 0%, white 1.iphone-x {
-  height: 724px;
-  width: 357px;
-  background-image: linear-gradient(
-    top,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 1) 1%,
-    rgba(0, 0, 0, 1) 2%,
-    rgba(255, 255, 255, 1) 5%,
-    rgba(255, 255, 255, 1) 95%,
-    rgba(0, 0, 0, 1) 98%,
-    rgba(255, 255, 255, 1) 99%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  margin: 100px auto;
+  max-width: 400px;
+  background-image: linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 1%, rgba(0,0,0,1) 2%, rgba(255,255,255,1) 5%, rgba(255,255,255,1) 95%, rgba(0,0,0,1) 98%, rgba(255,255,255,1) 99%, rgba(255,255,255,1) 100%);
+  margin: 50px auto;
   border-radius: 55px;
   box-sizing: border-box;
   border: 2px solid black;
-  box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75);
   position: relative;
-}
-.iphone-x {
-	width: 1000px;
-}
-.divider {
-  background: #aaaaaa;
-  height: 5px;
-  width: 100%;
-  position: absolute;
-  &:first-of-type {
-    top: 9%;
-  }
-  &:last-of-type {
-    bottom: 9%;
-  }
+  background-color: #eee;
 }
 
 .bezel {
@@ -344,7 +316,10 @@ body{
 	#cadre{
 		padding: 0;
 		height: auto;
-		width: 90vw;
 	}
+  .iphone-x{
+    margin: 2.5%;
+    width: 95%;
+  }
 
 }
