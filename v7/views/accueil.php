@@ -4,7 +4,13 @@
 
 <!--  Début de la page -->
 <body>
-	<div id="cadre">
+
+	</div>
+
+<div class="iphone-x">
+  <div class="divider"></div>
+  <div class="bezel"></div>
+  <div class="screen">	<div id="cadre">
 		<div id="contenu">
 			<img src="assets\images\logo_grand_transparent.png" id="logo">
 			<h1>Que doit être le point fort de votre téléphone ?</h1>
@@ -16,10 +22,14 @@
 				<input type="button" value="Sans préférences" name="personnalise" class="btn-hover btn_principal" onclick="subForm(4);">
 				<input type="hidden" name="persona" value="<?= $_POST['persona'] ?>" id="persona">
 			</form>
-		</div>
-	</div>
-
-
+		</div></div>
+  <div class="speaker"></div>
+  <div class="camera"></div>
+  <div class="button mute"></div>
+  <div class="button vol-up"></div>
+  <div class="button vol-down"></div>
+  <div class="button right"></div>
+</div>
 
 <!--  Fin de la page -->
 

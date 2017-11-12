@@ -18,13 +18,13 @@
 </div>
 <div id="colonne_droite">
 	<h1>Il vous reste <input name="sum" value="0" id="result" size="1" readonly> points</h1>
-	<h2>Photographie</h2>
+	<h2><i class="fa fa-camera" aria-hidden="true"></i> Photographie</h2>
      <input name="sum1" id="op1" value="<?= $_SESSION['photographie']; ?>" onChange="calc(this.value,'op2','op3','result')" type="range" min="0" max="10" data-highlight="true" /> 
-	<h2>Performance</h2>
+	<h2><i class="fa fa-bolt" aria-hidden="true"></i> Performance</h2>
      <input name="sum2" value="<?= $_SESSION['performance']; ?>" id="op2" onChange="calc(this.value,'op1','op3','result')" type="range" min="0" max="10" data-highlight="true" /> 
-	<h2>Autonomie</h2>
+	<h2><i class="fa fa-battery-full" aria-hidden="true"></i> Autonomie</h2>
      <input name="sum3" value="<?= $_SESSION['autonomie']; ?>" id="op3" onChange="calc(this.value,'op1','op2','result')" type="range" min="0" max="10" data-highlight="true" />
- 	<h2> </h2>
+ 	<div id="espacement"></div>
  	<a href="?page=resultats" id="rechercher"><p>Lancer la recherche</p></a>
 </div>
 

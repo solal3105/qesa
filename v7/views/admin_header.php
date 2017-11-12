@@ -22,4 +22,3 @@
 			<link rel="stylesheet" href="<?= PATH_CSS ?>font-awesome-4.7.0/css/font-awesome.min.css">
 	</head> 
 <?php 
-require_once(PATH_VIEWS."admin_menu.php");

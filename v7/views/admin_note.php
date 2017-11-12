@@ -1,5 +1,6 @@
 <?php
 require_once(PATH_VIEWS."admin_header.php");
+require_once(PATH_VIEWS."admin_menu.php");
 ?>
 <body>
 	<table>

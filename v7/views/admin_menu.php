@@ -2,7 +2,7 @@
 	<nav>
 		<ul>
 			<li>
-				<a href="#">connexion</a>
+				<a href="index.php?page=logout">Déconnexion</a>
 			</li>
 		</ul>
 	</nav>
