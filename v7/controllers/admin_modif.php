@@ -1,5 +1,5 @@
 <?php
-require_once(PATH_MODELS.'admin_modif.php');
+require_once(PATH_MODELS.'TelephoneDAO.php');
 
 $telephone = new TelephoneDAO(1);
 
@@ -28,16 +28,21 @@ if (!empty($_POST)) {
 		$_POST['carte_SD'] = 1;
 	}
 	else $_POST['carte_SD'] = 0;
+
 	$aupdate = array();
 	foreach ($colonne as $key => $value) {
 		if ($_POST[$value] != $tel[$value]) {
 			$aupdate[$value] = $_POST[$value];
+		}
+		else{
+			$aupdate[$value] = $tel[$value];
 		}
 	}
 }
 
 if (isset($aupdate) && !empty($aupdate)) {
 	$telephone->updateTel($aupdate,$idTel);
+	$tel = $telephone->getTelByID($idTel);
 }
 
 

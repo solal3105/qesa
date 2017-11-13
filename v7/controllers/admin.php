@@ -1,5 +1,5 @@
 <?php
-require_once(PATH_MODELS.'admin.php');
+require_once(PATH_MODELS.'TelephoneDAO.php');
 
 $telephone = new TelephoneDAO(1);
 

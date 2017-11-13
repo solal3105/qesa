@@ -1,29 +1,4 @@
-<?php
-require_once(PATH_MODELS."DAO.php");
-
-class TelephoneDAO extends DAO{
-	public function getTel($tri = NULL){
-		if ($tri == 'annee_sortie') {
-			$res = $this->queryAll("SELECT * FROM telephones WHERE pertinence = 1 ORDER BY  annee_sortie DESC, mois_sortie DESC");
-		}
-		elseif ($tri != NULL) {
-			$res = $this->queryAll("SELECT * FROM telephones WHERE pertinence = 1 ORDER BY $tri ASC");
-		}
-		else{
-			$res = $this->queryAll("SELECT * FROM telephones WHERE pertinence = 1");
-		}
-		if($res){
-			return $res;
-		}
-		else {
-			$this->getErreur();
-			return NULL;
-		}
-	}
-}
-?>
-<script type="text/javascript">
-	function submitTelForm(){
+function submitTelForm(){
 		document.getElementById('form_taille').submit();
 	}
 
@@ -50,4 +25,15 @@ class TelephoneDAO extends DAO{
 			location.href=redirect;
 		}
 	}
-</script>
+	function confirmer(){
+		if (confirm('voulez-vous ajouter la note ?')) {document.getElementById('conf').value = 1;}
+		else {document.getElementById('conf').value = -1;}
+	}
+
+	function changement(){
+		document.getElementById('form-general').submit();
+	}
+	function confirmer(){
+			if (confirm('voulez-vous ajouter la note ?')) {document.getElementById('conf').value = 1;}
+			else {document.getElementById('conf').value = -1;}
+		}

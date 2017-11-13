@@ -1,5 +1,5 @@
 <?php
-require_once(PATH_MODELS.'suppression.php');
+require_once(PATH_MODELS.'TelephoneDAO.php');
 
 $telephone = new TelephoneDAO(1);
 $tel = htmlspecialchars($_GET['IDtel']);

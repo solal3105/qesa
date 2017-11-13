@@ -20,6 +20,7 @@
 			<link rel="stylesheet" href="https://milligram.github.io/styles/main.css">
 			<link rel="stylesheet" href="<?= PATH_CSS ?>admin_style.css">
 			<link rel="stylesheet" href="<?= PATH_CSS ?>font-awesome-4.7.0/css/font-awesome.min.css">
+			<script type="text/javascript" language="javascript" src="<?= PATH_SCRIPTS ?>utilities.js"></script>
 	</head> 
 <?php 
 require_once(PATH_VIEWS."admin_menu.php");

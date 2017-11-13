@@ -1,5 +1,5 @@
 <?php
-require_once(PATH_MODELS.'admin_note.php');
+require_once(PATH_MODELS.'TelephoneDAO.php');
 
 $telephone = new TelephoneDAO(1);
 if (isset($_GET['IDtel'])) {
