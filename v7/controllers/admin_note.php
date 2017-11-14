@@ -1,12 +1,22 @@
 <?php
 require_once(PATH_MODELS.'TelephoneDAO.php');
 
+$mois = array('zero', 'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre');
+
 $telephone = new TelephoneDAO(1);
+
 if (isset($_GET['IDtel'])) {
 	$idTel = intval(htmlspecialchars($_GET['IDtel']));
-	$ligne = $telephone->getTelByID($idTel);
+	$tel = $telephone->getTelByID($idTel);
 	$notes = $telephone->verif_note($idTel);
+	foreach ($mois as $key => $value) {
+		if ($tel['mois_sortie'] == $key) {
+			$mois_sortie = $value;
+		}
+	}
 }
+
+
 if (!isset($_POST['conf'])) {
 	$_POST['conf'] = 0;
 }
@@ -30,6 +40,7 @@ if (isset($note_performance) && isset($note_APN) && isset($note_autonomie)) {
 		else echo "erreur d'envoi";
 	}
 	elseif (isset($_POST['conf']) && $_POST['conf'] == 1 && $notes != NULL) {
+
 		$modif_note = $telephone->updateNote($idTel, $note_performance, $note_APN, $note_autonomie);
 		if ($modif_note) {
 			echo '<META HTTP-EQUIV="Refresh" Content="0; URL=?page=admin">';
@@ -37,8 +48,6 @@ if (isset($note_performance) && isset($note_APN) && isset($note_autonomie)) {
 		else echo "erreur d'envoi";
 	}
 }
-
-$colonne = array('Fabricant', 'modele', 'annee_sortie', 'mois_sortie', 'masse', 'epaisseur', 'taille_ecran', 'largeur_ecran', 'hauteure_ecran', 'Ratio', 'OS', 'version_OS', 'cpu', 'ram', 'camera', 'capacite_batterie', 'type_batterie', 'memoire', 'carte_SD');
 
 
 require_once(PATH_VIEWS."admin_note.php");

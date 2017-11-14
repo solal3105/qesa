@@ -43,8 +43,7 @@ if (!empty($_POST)) {
 if (isset($aupdate) && !empty($aupdate)) {
 	$telephone->updateTel($aupdate,$idTel);
 	$tel = $telephone->getTelByID($idTel);
+	echo '<META HTTP-EQUIV="Refresh" Content="0; URL=?page=admin">';
 }
-
-
 
 require_once(PATH_VIEWS.'admin_modif.php');
