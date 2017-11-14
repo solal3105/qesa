@@ -4,6 +4,12 @@ require_once(PATH_VIEWS."admin_menu.php");
 ?>
 
 <div id="formulaire-modif">
+	<div id="botons-modif">
+	<form method="post">
+		<input type="button" name="changer" value="modifier les données" onclick="changement();">
+		<input type="button" name="suppr" id="bouton-suppr" value="Supprimer" onclick="supprimer(<?= $idTel ?>);">
+	</form>
+	</div>
 		<form method="post" id="form-general">
 		<h3>Général</h3>
 			<label for="Fabricant">Marque</label>
@@ -67,8 +73,5 @@ require_once(PATH_VIEWS."admin_menu.php");
 			<input type="radio" name="carte_SD" value="yes_sd" <?= ($tel['carte_SD'])? 'checked' : '' ?>>Oui<br>
 			<input type="radio" name="carte_SD" value="no_sd" <?= (!$tel['carte_SD'])? 'checked' : '' ?>>Non
 		</form>
-	<form method="post">
-		<input type="button" name="changer" value="modifier les données" onclick="changement();">
-	</form>
 </div>
 <?php require_once(PATH_VIEWS.'footer.php');

@@ -39,7 +39,7 @@ $ yarn add milligram
 
 ## Table of Contents
 
-- [Getting Started](https://milligram.github.io/#getting-started)
++ [Getting Started](https://milligram.github.io/#getting-started)
 - [Typography](https://milligram.github.io/#typography)
 - [Blockquotes](https://milligram.github.io/#blockquotes)
 - [Buttons](https://milligram.github.io/#buttons)

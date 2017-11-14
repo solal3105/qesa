@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once(PATH_MODELS.'TelephoneDAO.php');
 
 if(isset($_SESSION['userName'])) {
 
@@ -28,28 +29,26 @@ if(isset($_SESSION['userName'])) {
 				$_POST['mois_sortie'] = $key;
 			}
 		}
-		if ($_POST['carte_SD'] == 'yes_sd') {
-			$_POST['carte_SD'] = 1;
+	}
+	if ($_POST['carte_SD'] == 'yes_sd') {
+		$_POST['carte_SD'] = 1;
+	}
+	else $_POST['carte_SD'] = 0;
+
+	$aupdate = array();
+	foreach ($colonne as $key => $value) {
+		if ($_POST[$value] != $tel[$value]) {
+			$aupdate[$value] = $_POST[$value];
 		}
-		else $_POST['carte_SD'] = 0;
-		$aupdate = array();
-		foreach ($colonne as $key => $value) {
-			if ($_POST[$value] != $tel[$value]) {
-				$aupdate[$value] = $_POST[$value];
-			}
+		else{
+			$aupdate[$value] = $tel[$value];
 		}
 	}
 
-	if (isset($aupdate) && !empty($aupdate)) {
-		$telephone->updateTel($aupdate,$idTel);
-	}
-
-
-
-	require_once(PATH_VIEWS.'admin_modif.php');
-
+if (isset($aupdate) && !empty($aupdate)) {
+	$telephone->updateTel($aupdate,$idTel);
+	$tel = $telephone->getTelByID($idTel);
+	echo '<META HTTP-EQUIV="Refresh" Content="0; URL=?page=admin">';
 }
 
-else{
-    header("Location: index.php?page=login&erreur=Veuillez vous connecter pour accéder à l'espace administrateur");
-}
+require_once(PATH_VIEWS.'admin_modif.php');
