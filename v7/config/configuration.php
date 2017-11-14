@@ -19,7 +19,6 @@ define('PATH_ASSETS','./assets/');
 define('PATH_LIB','./lib/');
 define('PATH_MODELS','./models/');
 define('PATH_VIEWS','./views/');
-define('PATH_SCRIPTS','./scripts/');
 define('PATH_ENTITY', './entity/');
 
 //sous dossiers
