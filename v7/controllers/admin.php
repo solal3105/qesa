@@ -4,8 +4,6 @@ require_once(PATH_MODELS.'TelephoneDAO.php');
 
 if(isset($_SESSION['userName'])) {
 
-	require_once(PATH_MODELS.'admin.php');
-
 	$telephone = new TelephoneDAO(1);
 
 	if (isset($_GET['tri'])) {

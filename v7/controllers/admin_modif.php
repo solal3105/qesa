@@ -3,9 +3,7 @@ session_start();
 require_once(PATH_MODELS.'TelephoneDAO.php');
 
 if(isset($_SESSION['userName'])) {
-
-	require_once(PATH_MODELS.'admin_modif.php');
-
+	
 	$telephone = new TelephoneDAO(1);
 
 	if (isset($_GET['IDtel'])) {
@@ -52,3 +50,8 @@ if (isset($aupdate) && !empty($aupdate)) {
 }
 
 require_once(PATH_VIEWS.'admin_modif.php');
+
+}
+else{
+    header("Location: index.php?page=login&erreur=Veuillez vous connecter pour accéder à l'espace administrateur");
+}
