@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once(PATH_MODELS.'TelephoneDAO.php');
 
 if(isset($_SESSION['userName'])) {
@@ -21,25 +20,26 @@ if(isset($_SESSION['userName'])) {
 
 	$colonne = array('Fabricant', 'modele', 'annee_sortie', 'mois_sortie', 'masse', 'epaisseur', 'taille_ecran', 'largeur_ecran', 'hauteure_ecran', 'OS', 'version_OS', 'cpu', 'ram', 'camera', 'capacite_batterie', 'type_batterie', 'memoire', 'carte_SD');
 
+
 	if (!empty($_POST)) {
 		foreach ($mois as $key => $value) {
 			if ($_POST['mois_sortie'] == $value) {
 				$_POST['mois_sortie'] = $key;
 			}
 		}
-	}
-	if ($_POST['carte_SD'] == 'yes_sd') {
-		$_POST['carte_SD'] = 1;
-	}
-	else $_POST['carte_SD'] = 0;
-
-	$aupdate = array();
-	foreach ($colonne as $key => $value) {
-		if ($_POST[$value] != $tel[$value]) {
-			$aupdate[$value] = $_POST[$value];
+		if ($_POST['carte_SD'] == 'yes_sd') {
+			$_POST['carte_SD'] = 1;
 		}
-		else{
-			$aupdate[$value] = $tel[$value];
+		else $_POST['carte_SD'] = 0;
+
+		$aupdate = array();
+		foreach ($colonne as $key => $value) {
+			if ($_POST[$value] != $tel[$value]) {
+				$aupdate[$value] = $_POST[$value];
+			}
+			else{
+				$aupdate[$value] = $tel[$value];
+			}
 		}
 	}
 
@@ -49,9 +49,10 @@ if (isset($aupdate) && !empty($aupdate)) {
 	echo '<META HTTP-EQUIV="Refresh" Content="0; URL=?page=admin">';
 }
 
-require_once(PATH_VIEWS.'admin_modif.php');
+
 
 }
 else{
     header("Location: index.php?page=login&erreur=Veuillez vous connecter pour accéder à l'espace administrateur");
 }
+require_once(PATH_VIEWS.'admin_modif.php');

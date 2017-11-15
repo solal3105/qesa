@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 if(isset($_SESSION['userName'])) {
 
 	require_once(PATH_MODELS.'TelephoneDAO.php');
@@ -13,11 +11,7 @@ if(isset($_SESSION['userName'])) {
 		$idTel = intval(htmlspecialchars($_GET['IDtel']));
 		$tel = $telephone->getTelByID($idTel);
 		$notes = $telephone->verif_note($idTel);
-		foreach ($mois as $key => $value) {
-			if ($tel['mois_sortie'] == $key) {
-				$mois_sortie = $value;
-			}
-		}
+		$mois_sortie = $mois[$tel['mois_sortie']];
 	}
 
 

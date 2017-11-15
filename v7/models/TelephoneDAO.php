@@ -118,7 +118,14 @@ class TelephoneDAO extends DAO{
 	}
 
 	public function supprimerTel($id){
-		$res = $this->queryRowIns('DELETE FROM telephones WHERE ID = ?', array($id));
+		$note = $this->queryRow('SELECT note FROM telephones WHERE ID = ?', array($id));
+
+		if ($note) {
+			$res2 = $this->queryRowIns('DELETE FROM notes WHERE ID = ?', array($id));
+			$res1 = $this->queryRowIns('DELETE FROM telephones WHERE ID = ?', array($id));
+			$res = $res1*$res2;
+		}
+		else $res = $this->queryRowIns('DELETE FROM telephones WHERE ID = ?', array($id));
 		return $res;
 	}
 }

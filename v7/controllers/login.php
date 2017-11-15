@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 if (isset($_POST['btonSubmit'])){
     if ($_POST['userName'] and $_POST['userPassword']){
@@ -7,7 +6,7 @@ if (isset($_POST['btonSubmit'])){
         $userPassword = htmlspecialchars($_POST['userPassword']);
         $userPassword = md5($userPassword); // On crypte le mdp
         require_once (PATH_MODELS . 'UserDAO.php');
-        $userDAO = new UserDAO();
+        $userDAO = new UserDAO(1);
         $user = $userDAO->getUser($userName);
         if ($user == null){
             $erreur = "Pseudo incorrect";

@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once(PATH_MODELS.'TelephoneDAO.php');
 
 if(isset($_SESSION['userName'])) {
