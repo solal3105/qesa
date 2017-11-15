@@ -1,5 +1,4 @@
 <?php
-
 require_once(PATH_MODELS.'TelephoneDAO.php');
 
 $_SESSION['photographie'] = $_POST['photo'];
@@ -13,12 +12,12 @@ $notesTel = $telephone->getNotes();
 
 $notesFinales = array();
 foreach ($notesTel as $key => $value) {
-	$note_perf = $notesTel[$key]['note_performance']*$_SESSION['performance'];
-	$note_auto = $notesTel[$key]['note_autonomie']*$_SESSION['autonomie'];
-	$note_APN = $notesTel[$key]['note_photo']*$_SESSION['photographie'];
+	$note_perf = $value['note_performance']*$_SESSION['performance'];
+	$note_auto = $value['note_autonomie']*$_SESSION['autonomie'];
+	$note_APN = $value['note_photo']*$_SESSION['photographie'];
 	$note = $note_perf + $note_APN + $note_auto;
 	$note = $note/$totalNoteUser;
-	$notesFinales[$notesTel[$key]['id']] = $note;
+	$notesFinales[$value['id']] = $note;
 }
 
 asort($notesFinales);
