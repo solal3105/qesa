@@ -7,7 +7,7 @@
 </header>
 <body>
 	<div id="sous_menu">
-		<input type="button" class="bouton_sous_menu" value="Modifier les critères"  name="modifier la recherche" id="recherche">
+		<input type="button" class="bouton_sous_menu" value="Modifier les critères"  name="modifier la recherche" id="recherche" onclick="location.href='?page=personas';">
 		<div id="budget" class="bouton_sous_menu">
 			<p>Budget :</p>
 			<input type="number" name="budget" onclick="" step="5">
@@ -22,16 +22,14 @@
 		</div>
 	</div>
 <div id="conteneur">
-
-	<?php for ($i=0; $i < 100; $i++) { 
-	?>
-	<div class="telephone">
-		<?php $n=rand(1, 4); ?>
-		<h2>Nom du telephone</h2>
-		<img src="assets\images\telephone <?php echo $n; ?>.png">
-		<p class="prix"><?= 200+rand(1, 800); ?>€</p>
-		<p class="note"><?= 100-$i; ?>/100</p>
-	</div>
-	<?php } ?>
+		<?php
+		foreach ($tel as $key => $value) { ?>
+			<div class="telephone">
+			<h2><?= $value['Fabricant'].' '.$value['modele'] ?></h2>
+			<img src="assets\images\telephone 4.png">
+			<p class="prix">1059€</p>
+			<p class="note"><?= (int)($notesFinales[$value['ID']]*10)/10 ?>/10</p>
+			</div>
+		<?php } ?>
 	</div>
 </body>

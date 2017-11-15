@@ -18,13 +18,13 @@
 </div>
 <div id="colonne_droite">
 	<h1>Il vous reste <input name="sum" value="0" id="result" size="1" readonly> points</h1>
-	<h2><i class="fa fa-camera" aria-hidden="true"></i> Photographie</h2>
 	<form method="post" action="?page=resultats">
-     <input name="sum1" id="op1" value="<?= $_SESSION['photographie']; ?>" onChange="calc(this.value,'op2','op3','result')" type="range" min="0" max="10" data-highlight="true" /> 
+	<h2><i class="fa fa-camera" aria-hidden="true"></i> Photographie</h2>
+     <input name="photo" id="op1" value="<?= $_SESSION['photographie']; ?>" onChange="calc(this.value,'op2','op3','result')" type="range" min="0" max="10" data-highlight="true"> 
 	<h2><i class="fa fa-bolt" aria-hidden="true"></i> Performance</h2>
-     <input name="sum2" value="<?= $_SESSION['performance']; ?>" id="op2" onChange="calc(this.value,'op1','op3','result')" type="range" min="0" max="10" data-highlight="true" /> 
+     <input name="perf" value="<?= $_SESSION['performance']; ?>" id="op2" onChange="calc(this.value,'op1','op3','result')" type="range" min="0" max="10" data-highlight="true"> 
 	<h2><i class="fa fa-battery-full" aria-hidden="true"></i> Autonomie</h2>
-     <input name="sum3" value="<?= $_SESSION['autonomie']; ?>" id="op3" onChange="calc(this.value,'op1','op2','result')" type="range" min="0" max="10" data-highlight="true" />
+     <input name="auto" value="<?= $_SESSION['autonomie']; ?>" id="op3" onChange="calc(this.value,'op1','op2','result')" type="range" min="0" max="10" data-highlight="true">
  	<div id="espacement"></div>
  	<input type="submit" id="rechercher" value="Lancer la recherche"></input>
  </form>

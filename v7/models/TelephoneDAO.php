@@ -21,6 +21,17 @@ class TelephoneDAO extends DAO{
 		}
 	}
 
+	public function getNotes(){
+		$res = $this->queryAll('SELECT * FROM notes');
+		if($res){
+			return $res;
+		}
+		else {
+			$this->getErreur();
+			return NULL;
+		}
+	}
+
 	public function getAllBrands(){
 		$res = $this->queryAll("SELECT distinct(Fabricant) FROM telephones");
 		if ($res) {
