@@ -1,14 +1,14 @@
 <?php
 
 // Accès base de données
-const BD_HOST = 'localhost';
-const BD_DBNAME = 'qeza_tests';
-const BD_USER = 'root';
-const BD_PWD = '';
-//const BD_HOST = 'db700643069.db.1and1.com';
-//const BD_DBNAME = 'db700643069';
-//const BD_USER = 'dbo700643069';
-//const BD_PWD = '1solal3105';
+//const BD_HOST = 'localhost';
+//const BD_DBNAME = 'qeza_tests';
+//const BD_USER = 'root';
+//const BD_PWD = '';
+const BD_HOST = 'db700643069.db.1and1.com';
+const BD_DBNAME = 'db700643069';
+const BD_USER = 'dbo700643069';
+const BD_PWD = '1solal3105';
 
 //Langues
 const LANG ='FR-fr';
