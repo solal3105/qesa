@@ -39,9 +39,6 @@ CREATE TABLE `notes` (
 -- Déchargement des données de la table `notes`
 --
 
-INSERT INTO `notes` (`id`, `note_performance`, `note_photo`, `note_autonomie`) VALUES
-(170, 8, 6, 5);
-
 -- --------------------------------------------------------
 
 --
