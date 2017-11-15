@@ -22,4 +22,4 @@ if($_POST['persona']=='personalise'){
 }
 
 require_once(PATH_VIEWS.'personas.php');
-?>
+

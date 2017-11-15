@@ -38,11 +38,6 @@ body{
 #colonne_droite input[type='range']{
 	width: 100%;
 }
-a.btn_secondaire{
-	font-size: 30px;
-	color: #90d051;
-	text-decoration: none;
-}
 img#logo{
 	width: 250px;
 	display: block;
@@ -84,15 +79,18 @@ input[type=range]{
     -webkit-appearance: none;
 }
 
-a#rechercher {
+input#rechercher {
     background-image:linear-gradient(to right,#667eea, #764ba2);
     box-shadow: 0 4px 15px 0 rgba(0,0,0, 0.25);
     display: block;
-    padding: 5px;
+    padding: 10px 20px;
     border-radius: 30px;
     color: #fff;
     text-decoration: none;
     text-align: center;
+    border: 0;
+    font-size: 20px;
+    width: 100%;
 }
 p{
 	margin:10px;
