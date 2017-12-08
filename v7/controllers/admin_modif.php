@@ -4,7 +4,6 @@ require_once(PATH_MODELS.'TelephoneDAO.php');
 if(isset($_SESSION['userName'])) {
 	
 	$telephone = new TelephoneDAO(1);
-
 	if (isset($_GET['IDtel'])) {
 		$idTel = intval(htmlspecialchars($_GET['IDtel']));
 		$tel = $telephone->getTelByID($idTel);

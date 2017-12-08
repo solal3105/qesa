@@ -2,11 +2,12 @@
 require_once(PATH_MODELS."DAO.php");
 
 class TelephoneDAO extends DAO{
-	public function getTel($tri = NULL){
+
+	public function getTel($tri = null){
 		if ($tri == 'annee_sortie') {
 			$res = $this->queryAll("SELECT * FROM telephones WHERE pertinence = 1 ORDER BY  annee_sortie DESC, mois_sortie DESC");
 		}
-		elseif ($tri != NULL) {
+		elseif ($tri != null) {
 			$res = $this->queryAll("SELECT * FROM telephones WHERE pertinence = 1 ORDER BY $tri ASC");
 		}
 		else{
@@ -17,7 +18,18 @@ class TelephoneDAO extends DAO{
 		}
 		else {
 			$this->getErreur();
-			return NULL;
+			return null;
+		}
+	}
+
+	public function getAllTels(){
+		$res = $this->queryAll("SELECT * FROM telephones");
+		if($res){
+			return $res;
+		}
+		else {
+			$this->getErreur();
+			return null;
 		}
 	}
 
@@ -28,7 +40,7 @@ class TelephoneDAO extends DAO{
 		}
 		else {
 			$this->getErreur();
-			return NULL;
+			return null;
 		}
 	}
 
@@ -95,6 +107,17 @@ class TelephoneDAO extends DAO{
 				'id' => $idtel));
 	}
 
+	public function addTel($t){
+		$ratio = $t['hauteurEcran'] / $t['largeurEcran'];
+		$param = array($t['marque'], $t['modele'], $t['annee'], $t['mois'], $t['masse'], $t['epaisseur'], $t['tailleEcran'], $t['largeurEcran'], $t['hauteurEcran'], $ratio, $t['typeOs'], $t['versionOs'], $t['processeur'], $t['memoireRam'],$t['resolutionCamera'],$t['capaciteBatterie'],$t['typeBatterie'],$t['capaciteStockage'],$t['cardSlot'], 0, 0, 1);
+		/*
+		$this->ecrireDonnees("INSERT INTO `telephones` (`Fabricant`, `modele`, `pertinence`, `note`, `newTel`) VALUES (?,?,?,?,?) ", $param);
+		*/
+
+		$this->ecrireDonnees("INSERT INTO `telephones` (`Fabricant`, `modele`, `annee_sortie`, `mois_sortie`, `masse`, `epaisseur`, `taille_ecran`, `largeur_ecran`, `hauteure_ecran`, `Ratio`, `OS`, `version_OS`, `cpu`, `ram`, `camera`, `capacite_batterie`, `type_batterie`, `memoire`, `carte_SD`, `pertinence`, `note`, `newTel`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ", $param);
+		
+	}
+
 	//recupére un téléphone grâce à son ID
 	public function getTelByID($id){
 		$res = $this->queryRow("SELECT * FROM telephones WHERE ID = $id");
@@ -116,7 +139,7 @@ class TelephoneDAO extends DAO{
 		if ($tmp['note'] == 1) {
 			$res = $this->queryRow("SELECT * FROM notes WHERE id = $idTel");
 		}
-		else $res = NULL;
+		else $res = null;
 		return $res;
 	}
 

@@ -55,6 +55,16 @@ abstract class DAO{
 		return $res;
 	}
 
+	public function ecrireDonnees($sql, $args = null){
+      try {
+          $pdos = $this->_requete($sql, $args);
+      }
+      catch(PDOException $e) {
+          $this->_erreur = $e->getMessage();
+          $pdos = false;
+      }
+  }
+
 	//retourne un tableau 2D ou false
 	public function queryAll($sql,$args = NULL){
 		try {
