@@ -53,8 +53,12 @@ function getSpecs($collecteurLink){
         else{
             $specs[$i]['annee'] = between($released, "Released ", ",");
         }
+
         $body = $html->find('span[data-spec=body-hl]',0)->plaintext;
-        $specs[$i]['masse'] = before($body, "g,");
+        $masse = before($body, "g,");
+        if (count_chars($masse) > 3) $masse = null;
+        $specs[$i]['masse'] = $masse;
+
         $specs[$i]['epaisseur'] = between($body, ", ", "mm");
         $displaySize = $html->find('span[data-spec=displaysize-hl]',0)->plaintext;
         $specs[$i]['tailleEcran'] = before($displaySize, "\"");
@@ -186,20 +190,32 @@ if(isset($_SESSION['userName'])) {
         
         
         $links = markLinks();
+        //var_dump($links);
         
         $phones = recupPhones($nbTelToScrap, $links);
         $phonesTries = trierPhones($phones, $minRam, $minSize, $maxSize, $phonesExistants);
         $tels = getSpecs($phonesTries);
         
         $nbTels = 0;
-        var_dump($tels);
+        $nbErreurs = 0;
+        //var_dump($tels);
         foreach ($tels as $key) {
-           $phonesDao->addTel($key);
-           $nbTels++;
+            $phonesDaoBis = new TelephoneDAO(0);
+            $phonesDaoBis->addTel($key);
+           if ($phonesDaoBis->getErreur() == null){
+               $nbTels++;
+           }
+           else{
+               var_dump($key);
+               var_dump($phonesDaoBis->getErreur());
+               $nbErreurs++;
+           }
+
+
         }
 
         echo $nbTels . " téléphones ajoutés en base";
-        
+        echo $nbErreurs . " Erreurs";
     }
 
 

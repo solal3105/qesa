@@ -39,41 +39,44 @@ require_once(PATH_VIEWS."admin_menu.php");
             </thead>
             <tbody>
             <?php
-            foreach ($tel as $key1 => $value1) {
-                if (isset($_POST['taille_tab']) && ($key1 < $_POST['nbPage']*$_POST['taille_tab'] || $key1 > $_POST['taille_tab']*($_POST['nbPage']+1))) {
-                    continue;}
-                ?>
-                <tr <?= ($value1['note'] == 1)? '' : 'class="non_note"' ?> >
-                    <td>
-                        <a href="?page=validateNewTel&IDtel=<?= $value1['ID'] ?>">
-                            <img src="<?=PATH_IMAGES?>admin/validate.png" class="icon-table" alt="icone check Valider">
-                        </a>
-                        <a href="?page=admin_modif&type=scrap&IDtel=<?= $value1['ID'] ?>">
-                            <img src="<?=PATH_IMAGES?>admin/modifier.png" class="icon-table" alt="icone stylo modifier">
-                        </a>
-                        <i id="suppr" onclick="supprimer(<?= $value1['ID'] ?>, true);">
-                            <img src="<?=PATH_IMAGES?>admin/delete.png" class="icon-table" alt="icone croix supprimer">
-                        </i>
-                    </td>
-                    <?php
-                    foreach ($colonnesBdd as $key2 => $value2) {
-
-                        if ($value2 == 'annee_sortie' and $value1['mois_sortie'] != null) {?>
-                            <td><?= $mois[$value1['mois_sortie']].' '.$value1['annee_sortie'] ?></td>
-                        <?php }
-                        elseif ($value2 == 'OS') { ?>
-                            <td><?= $value1['OS'].' '.$value1['version_OS'] ?></td>
-                        <?php }
-                        else { ?>
-                            <td><?= $value1[$value2] ?></td>
-                        <?php }
-                    }
+            if (count($tel) > 0){
+                foreach ($tel as $key1 => $value1) {
+                    if (isset($_POST['taille_tab']) && ($key1 < $_POST['nbPage']*$_POST['taille_tab'] || $key1 > $_POST['taille_tab']*($_POST['nbPage']+1))) {
+                        continue;}
                     ?>
-                </tr>
-                <?php
-                if (!isset($_POST['taille_tab']) && $key1 > ($_POST['nbPage']+1)*10) {
-                    break;
+                    <tr <?= ($value1['note'] == 1)? '' : 'class="non_note"' ?> >
+                        <td>
+                            <a href="?page=validateNewTel&IDtel=<?= $value1['ID'] ?>">
+                                <img src="<?=PATH_IMAGES?>admin/validate.png" class="icon-table" alt="icone check Valider">
+                            </a>
+                            <a href="?page=admin_modif&type=scrap&IDtel=<?= $value1['ID'] ?>">
+                                <img src="<?=PATH_IMAGES?>admin/modifier.png" class="icon-table" alt="icone stylo modifier">
+                            </a>
+                            <i id="suppr" onclick="supprimer(<?= $value1['ID'] ?>, true);">
+                                <img src="<?=PATH_IMAGES?>admin/delete.png" class="icon-table" alt="icone croix supprimer">
+                            </i>
+                        </td>
+                        <?php
+                        foreach ($colonnesBdd as $key2 => $value2) {
+
+                            if ($value2 == 'annee_sortie' and $value1['mois_sortie'] != null) {?>
+                                <td><?= $mois[$value1['mois_sortie']].' '.$value1['annee_sortie'] ?></td>
+                            <?php }
+                            elseif ($value2 == 'OS') { ?>
+                                <td><?= $value1['OS'].' '.$value1['version_OS'] ?></td>
+                            <?php }
+                            else { ?>
+                                <td><?= $value1[$value2] ?></td>
+                            <?php }
+                        }
+                        ?>
+                    </tr>
+                    <?php
+                    if (!isset($_POST['taille_tab']) && $key1 > ($_POST['nbPage']+1)*10) {
+                        break;
+                    }
                 }
+
             }
             ?>
             </tbody>

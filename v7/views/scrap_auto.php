@@ -20,7 +20,7 @@ require_once(PATH_VIEWS."admin_menu.php");
         <label> Taille minimale de la mémoire RAM (MB)</label>
         <input name="minRam" type="number" step="1000" value="2000">
 
-        <label> Nombre de téléphones à srapper (par marque)</label>
+        <label> Nombre de téléphones à scrapper (par marque)</label>
         <input name="nbTelParMarque" type="number" step="1" value="3">
 
         <input type="submit" name="btonSubmit" value="lancer le scraping">
