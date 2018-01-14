@@ -32,3 +32,4 @@ define('PATH_CSS', PATH_ASSETS.'css/');
 define('PATH_IMAGES', PATH_ASSETS.'images/');
 define('PATH_LOGO', PATH_IMAGES.'logo.png');
 define('PATH_MENU', PATH_VIEWS.'menu.php');
+define('PATHS_PHOTOS_PHONES', PATH_IMAGES.'telephones/');
