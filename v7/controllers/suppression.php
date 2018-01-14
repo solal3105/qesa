@@ -6,7 +6,13 @@ if (isset($_SESSION['userName'])) {
 	$tel = htmlspecialchars($_GET['IDtel']);
 	$res = $telephone->supprimerTel($tel);
 
-	header("Location: http://qezaco.com/?page=admin");
+	if ($_GET['type'] == "scrap"){
+        header("Location: index.php?page=newsTels");
+    }
+    else{
+        header("Location: index.php?page=admin");
+    }
+
 }
 else{
     header("Location: index.php?page=login&erreur=Veuillez vous connecter pour accéder à l'espace administrateur");

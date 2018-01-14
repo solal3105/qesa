@@ -8,7 +8,7 @@ require_once(PATH_VIEWS."admin_menu.php");
 <?php require_once(PATH_VIEWS.'alert.php');?>
 
     <!--  Début de la page -->
-    <h1><?= MENU_ACCUEIL ?></h1>
+    <h1>Scrapping automatique</h1>
 
     <form method="post">
         <label> Taille minimale de l'écran </label>
@@ -25,6 +25,9 @@ require_once(PATH_VIEWS."admin_menu.php");
 
         <input type="submit" name="btonSubmit" value="lancer le scraping">
     </form>
+
+
+    <a href="index.php?page=newsTels"> Téléphones scrappés récemment</a>
 
 
 

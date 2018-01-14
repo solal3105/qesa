@@ -45,7 +45,13 @@ if(isset($_SESSION['userName'])) {
 if (isset($aupdate) && !empty($aupdate)) {
 	$telephone->updateTel($aupdate,$idTel);
 	$tel = $telephone->getTelByID($idTel);
-	echo '<META HTTP-EQUIV="Refresh" Content="0; URL=?page=admin">';
+    if ($_GET['type'] == "scrap"){
+        echo '<META HTTP-EQUIV="Refresh" Content="0; URL=?page=newsTels">';
+    }
+    else{
+        echo '<META HTTP-EQUIV="Refresh" Content="0; URL=?page=admin">';
+    }
+
 }
 
 

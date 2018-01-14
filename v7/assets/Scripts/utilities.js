@@ -19,9 +19,15 @@ function submitTelForm(){
 		}
 		submitTelForm();
 	}
-	function supprimer(id){
+	function supprimer(id, isNewTel){
 		if (confirm("êtes vous sur de supprimer ce telephone ?")){
-			var redirect = '?page=suppression&IDtel='+id;
+			if (isNewTel){
+                var redirect = '?page=suppression&type=scrap&IDtel='+id;
+			}
+			else{
+                var redirect = '?page=suppression&IDtel='+id;
+			}
+
 			location.href=redirect;
 		}
 	}

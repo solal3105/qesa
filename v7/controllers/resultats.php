@@ -6,7 +6,6 @@ $_SESSION['autonomie'] = $_POST['auto'];
 $_SESSION['performance'] = $_POST['perf'];
 
 $totalNoteUser = $_SESSION['photographie']+$_SESSION['autonomie']+$_SESSION['performance'];
-
 $telephone = new TelephoneDAO(1);
 $notesTel = $telephone->getNotes();
 

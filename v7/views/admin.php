@@ -43,7 +43,7 @@ foreach ($tel as $key1 => $value1) {
 				<a href="?page=admin_note&IDtel=<?= $value1['ID'] ?>">
 					<img src="<?=PATH_IMAGES?>admin/rating.png" class="icon-table" alt="icone etoile rating">
 				</a>
-				<i id="suppr" onclick="supprimer(<?= $value1['ID'] ?>);">
+				<i id="suppr" onclick="supprimer(<?= $value1['ID'] ?>, false);">
 					<img src="<?=PATH_IMAGES?>admin/delete.png" class="icon-table" alt="icone croix supprimer">
 				</i>
 			</td>

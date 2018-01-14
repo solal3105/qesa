@@ -84,6 +84,17 @@ class TelephoneDAO extends DAO{
 		else return false;
 	}
 
+	public function getNewsTels(){
+        $res = $this->queryAll("SELECT * FROM telephones WHERE newTel = 1");
+        if($res){
+            return $res;
+        }
+        else {
+            $this->getErreur();
+            return null;
+        }
+    }
+
 	public function updateTel($tab,$idtel){
 		$this->queryRowIns("UPDATE telephones SET Fabricant = :fab, modele = :modele, annee_sortie = :annee, mois_sortie = :mois, masse = :masse, epaisseur = :epaisseur, taille_ecran = :taille, largeur_ecran = :largeur, hauteure_ecran = :hauteur, OS = :os, version_OS = :version, cpu = :cpu, ram = :ram, camera = :cam, capacite_batterie = :capac, type_batterie = :type, memoire = :mem, carte_SD = :sd WHERE ID = :id", array(
 				'fab' => $tab['Fabricant'],
@@ -110,10 +121,7 @@ class TelephoneDAO extends DAO{
 	public function addTel($t){
 		$ratio = $t['hauteurEcran'] / $t['largeurEcran'];
 		$param = array($t['marque'], $t['modele'], $t['annee'], $t['mois'], $t['masse'], $t['epaisseur'], $t['tailleEcran'], $t['largeurEcran'], $t['hauteurEcran'], $ratio, $t['typeOs'], $t['versionOs'], $t['processeur'], $t['memoireRam'],$t['resolutionCamera'],$t['capaciteBatterie'],$t['typeBatterie'],$t['capaciteStockage'],$t['cardSlot'], 0, 0, 1);
-		/*
-		$this->ecrireDonnees("INSERT INTO `telephones` (`Fabricant`, `modele`, `pertinence`, `note`, `newTel`) VALUES (?,?,?,?,?) ", $param);
-		*/
-
+		
 		$this->ecrireDonnees("INSERT INTO `telephones` (`Fabricant`, `modele`, `annee_sortie`, `mois_sortie`, `masse`, `epaisseur`, `taille_ecran`, `largeur_ecran`, `hauteure_ecran`, `Ratio`, `OS`, `version_OS`, `cpu`, `ram`, `camera`, `capacite_batterie`, `type_batterie`, `memoire`, `carte_SD`, `pertinence`, `note`, `newTel`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ", $param);
 		
 	}
