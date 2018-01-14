@@ -1,5 +1,5 @@
-form li{
-	display: block;
+nav li{
+	display: inline-block;
 }
 form ul{
 	margin: 30px;

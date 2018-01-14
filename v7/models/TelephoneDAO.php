@@ -170,4 +170,13 @@ class TelephoneDAO extends DAO{
 		else $res = $this->queryRowIns('DELETE FROM telephones WHERE ID = ?', array($id));
 		return $res;
 	}
+
+	public function validateNewTel($id){
+	    $param = array($id);
+        $this->queryRowIns("UPDATE telephones SET 
+              newTel = 0, 
+              pertinence = 1 
+          WHERE ID = ?", $param);
+
+    }
 }

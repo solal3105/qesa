@@ -45,6 +45,9 @@ require_once(PATH_VIEWS."admin_menu.php");
                 ?>
                 <tr <?= ($value1['note'] == 1)? '' : 'class="non_note"' ?> >
                     <td>
+                        <a href="?page=validateNewTel&IDtel=<?= $value1['ID'] ?>">
+                            <img src="<?=PATH_IMAGES?>admin/validate.png" class="icon-table" alt="icone check Valider">
+                        </a>
                         <a href="?page=admin_modif&type=scrap&IDtel=<?= $value1['ID'] ?>">
                             <img src="<?=PATH_IMAGES?>admin/modifier.png" class="icon-table" alt="icone stylo modifier">
                         </a>
