@@ -165,13 +165,17 @@ function trierPhones($phones, $minRam = null, $minTaille, $maxTaille, $phoneExis
         $modelname = $html->find('h1[data-spec=modelname]',0)->plaintext;
         $marque = before($modelname, " ");
         $modele = after($modelname, " ");
-        foreach ($phoneExistants as $key) {
-            if ($suppr == false) {
-               if ($key["Fabricant"] == $marque and $key["modele"] == $modele) {
-                 $suppr = true;
+
+        if (!is_null($phoneExistants)){
+            foreach ($phoneExistants as $key) {
+                if ($suppr == false) {
+                    if ($key["Fabricant"] == $marque and $key["modele"] == $modele) {
+                        $suppr = true;
+                    }
                 }
             }
         }
+
         if ($suppr){
             unset($phonesTries[$i]);
         }
@@ -207,7 +211,7 @@ if(isset($_SESSION['userName'])) {
         
         $nbTels = 0;
         $nbErreurs = 0;
-        var_dump($tels);
+
         foreach ($tels as $key) {
             $phonesDaoBis = new TelephoneDAO(0);
             $phonesDaoBis->addTel($key);
@@ -239,6 +243,8 @@ if(isset($_SESSION['userName'])) {
         echo $nbTels . " téléphones ajoutés en base";
         echo "<br>";
         echo $nbErreurs . " Erreurs";
+
+        var_dump($tels);
     }
 
 
