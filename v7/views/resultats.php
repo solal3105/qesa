@@ -27,7 +27,11 @@
 			<div class="telephone">
 			<h2><?= $value['Fabricant'].' '.$value['modele'] ?></h2>
 			<img src="<?= PATHS_PHOTOS_PHONES . $value['Fabricant'] . "_" . $value['modele'] . "_hd.jpg" ?>">
-			<p class="prix">1059€</p>
+			<p class="prix">
+				<?php 
+				echo rand(150, 1100);
+				?>
+			</p>
 			<p class="note"><?= (int)($notesFinales[$value['ID']]*10)/10 ?>/10</p>
 			</div>
 		<?php } ?>

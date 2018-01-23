@@ -68,12 +68,12 @@ header{
 
 }
 .bouton_sous_menu select,.bouton_sous_menu input {
-	margin: 20px 20px 20px 10px;
+	margin: 10px 10px 10px 10px;
 	padding: 10px;
 	border: 0;
 }
 .bouton_sous_menu input{
-	margin: 20px 0 20px 10px;
+	margin: 10px 0 10px 10px;
 	text-align: right;
 }
 #recherche{

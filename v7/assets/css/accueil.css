@@ -39,9 +39,6 @@ body{
   background-color: #eee;
   transition: 0.3s;
 }
-.iphone-x:hover{
-  transform: scale(1.03);
-}
 
 .bezel {
   width: calc(100% - 10px);
