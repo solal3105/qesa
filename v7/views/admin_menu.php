@@ -13,6 +13,9 @@
 			<li>
 				<a href="index.php?page=logout">Déconnexion</a>
 			</li>
+            <li>
+                <a href="?page=note_auto">Noter les téléphones</a>
+            </li>
 
 		</ul>
 	</nav>
