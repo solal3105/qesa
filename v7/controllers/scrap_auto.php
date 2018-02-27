@@ -88,6 +88,9 @@ function getSpecs($collecteurLink){
         $batType = $html->find('div[data-spec=battype-hl]',0)->plaintext;
         $specs[$i]['typeBatterie'] = $batType;
 
+        $price = $html->find('td[data-spec=price]', 0)->plaintext;
+        $specs[$i]['prix'] = between($price, 'About ', ' EUR');
+        
         $imgUrl = $html->find('div[class=specs-photo-main] a img',0)->src;
         $specs[$i]['imgUrl'] = $imgUrl;
 
@@ -96,6 +99,7 @@ function getSpecs($collecteurLink){
         $htmlPhoto = file_get_html($lien2);
         $image2Url = $htmlPhoto->find('div[id=pictures-list] p img',0)->src;
         $specs[$i]['imgUrl2'] = $image2Url;
+        
         $i++;
     }
     return $specs;
@@ -215,8 +219,10 @@ if(isset($_SESSION['userName'])) {
         foreach ($tels as $key) {
             $phonesDaoBis = new TelephoneDAO(0);
             $phonesDaoBis->addTel($key);
+
            if ($phonesDaoBis->getErreur() == null){
                $nbTels++;
+               
                // On upload les 2 images
                $url1 = $key['imgUrl'];
                $url2 = $key['imgUrl2'];
@@ -228,7 +234,7 @@ if(isset($_SESSION['userName'])) {
                $data2 = file_get_contents($url2);
                $new2 = PATHS_PHOTOS_PHONES . $key['marque'] . '_' . $key['modele'] . '_hd.jpg';
                file_put_contents($new2, $data2);
-
+                
 
            }
            else{
