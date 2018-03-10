@@ -50,15 +50,17 @@ header{
 	padding-top:10px;
 }
 .telephone:hover, .caracteristiques{
-		box-shadow: 0 0px 15px 0 rgba(0,0,0, 0.35);
-		transform: scale(1.05);
+	box-shadow: 0 0px 15px 0 rgba(0,0,0, 0.35);
+	transform: scale(1.05);
+	cursor: pointer;
 }
+
 #conteneur{
 	width: 90%;
 	margin: auto;
 	overflow: none;
-	  display: flex;
-  flex-wrap: wrap;
+	display: flex;
+    flex-wrap: wrap;
 }
 .close{
 	position:absolute;
@@ -97,6 +99,11 @@ header{
 	font-size:  20px;
 
 }
+
+.bouton_sous_menu:hover{
+	cursor: pointer;
+}
+
 .bouton_sous_menu select,.bouton_sous_menu input {
 	margin: 10px 10px 10px 10px;
 	padding: 10px;

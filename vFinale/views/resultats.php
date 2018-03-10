@@ -47,27 +47,27 @@
 				<table>
 					<tr>
 						<td><i class="fas fa-square"></i>RAM</td>
-						<td>8gb</td>
+						<td><?= $value['ram'] . " GO"?></td>
 					</tr>
 					<tr>
 						<td><i class="fas fa-rocket"></i>Stockage</td>
-						<td>64gb</td>
+						<td><?= $value['memoire'] . " GO"?></td>
 					</tr>
 					<tr>
 						<td><i class="fas fa-bolt"></i>Processeur</td>
-						<td>SnapDragon 835</td>
+						<td><?= $value['cpu'] ?></td>
 					</tr>
 					<tr>
 						<td><i class="fas fa-mobile"></i>écran</td>
-						<td>5.5"</td>
+						<td><?= $value['taille_ecran'] . ' "' ?></td>
 					</tr>
 					<tr>
 						<td><i class="fas fa-expand-arrows-alt"></i>Ratio</td>
-						<td>18:9</td>
+						<td><?= $value['Ratio'] ?></td>
 					</tr>
 					<tr>
 						<td><i class="fas fa-weight"></i>Poids</td>
-						<td>300 grammes</td>
+						<td><?= $value['masse'] . " g"?></td>
 					</tr>
 				</table>
 

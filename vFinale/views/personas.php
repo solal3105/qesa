@@ -28,7 +28,7 @@
 	<h2><i class="fa fa-battery-full" aria-hidden="true"></i> Autonomie</h2>
      <input name="auto" value="<?= $_SESSION['autonomie']; ?>" id="op3" onChange='calcPts("op1","op2","op3","result");disable(document.getElementById("rechercher"));' type="range" min="0" max="10" data-highlight="true">
  	<div id="espacement"></div>
- 	<input type="submit" id="rechercher" value="Lancer la recherche" ></input>
+ 	<input type="submit" class="rechercher" id="rechercher" value="Lancer la recherche" ></input>
 
  </form>
 </div>
