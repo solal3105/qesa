@@ -19,7 +19,7 @@ function between ($str, $from, $to)
     $chaine = before($str, $to);
     $chaine = after($chaine, $from);
     return $chaine;
-};
+}
 function setMonthInFrench($month){
     switch ($month){
         case "January": return 1;

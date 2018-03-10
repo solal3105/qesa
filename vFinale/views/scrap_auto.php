@@ -1,16 +1,17 @@
+<link href="<?= PATH_CSS ?>scraping.css" rel="stylesheet">
+
 <?php
 require_once(PATH_VIEWS."admin_header.php");
 require_once(PATH_VIEWS."admin_menu.php");
 ?>
 
-
     <!--  Zone message d'alerte -->
 <?php require_once(PATH_VIEWS.'alert.php');?>
 
     <!--  Début de la page -->
-    <h1>Scrapping automatique</h1>
+    <h1 class="scrap">Scrapping automatique</h1>
 
-    <form method="post">
+    <form class="scrap" method="post">
         <label> Taille minimale de l'écran </label>
         <input name="minScreenSize" type="number" step="0.1" value="3">
 
@@ -27,7 +28,7 @@ require_once(PATH_VIEWS."admin_menu.php");
     </form>
 
 
-    <a href="index.php?page=newsTels"> Téléphones scrappés récemment</a>
+    <a class="scrap" href="index.php?page=newsTels"> Téléphones scrappés récemment</a>
 
 
 
