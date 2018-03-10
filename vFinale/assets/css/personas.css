@@ -1,0 +1,124 @@
+h1,h2,a{
+	font-family: 'Montserrat', sans-serif;
+}
+i{
+	min-width: 70px;
+	text-align: center;
+}
+body{
+	height: 100vh;
+	width: 100%;
+}
+/*#colonne_gauche{
+	width: 40%;
+	background-color: #fff;
+	height: 100vh;
+  	-moz-box-shadow: 0px 0px 50px #888; 
+  	-webkit-box-shadow: 0px 0px 50px #888;
+  	float: left;
+  	padding: 20px;
+  	max-width: 400px;
+}
+*/
+#colonne_droite h1{
+	font-weight: 800;
+	font-size: 28px;
+	text-align: left;
+	margin: 40px 0;
+}
+#colonne_droite h2{
+	font-weight: 600;
+	font-size: 25px;
+	margin: 30px auto 30px auto;
+}
+#colonne_droite{
+	display: block;
+	margin: auto;
+	width: 500px;
+	max-width: 90%;
+}
+#colonne_droite input[type='range']{
+	width: 100%;
+}
+img#logo{
+	width: 250px;
+	display: block;
+	margin: 40px auto;
+}
+#colonne_droite a.btn_principal{
+	margin: 40px 0;
+}
+#result{
+	border: 0px solid black;
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+	width: 70px;
+	transition: 0.3s;
+
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #25aae1, #40e495);
+  border-radius: 10px;
+  height: 20px;
+  box-shadow: 0 4px 15px 0 rgba(0,0,0, 0.25);
+}
+
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 30px;
+    width: 30px;
+    background: rgba(255,255,255,1);
+    box-shadow: 0 0px 15px 0 rgba(0,0,0, 0.5);
+    border-radius: 15px;
+    position: relative;
+    bottom: 5px;
+}
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input#rechercher {
+    background-image:linear-gradient(to right,#667eea, #764ba2);
+    box-shadow: 0 4px 15px 0 rgba(0,0,0, 0.25);
+    display: block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border: 0;
+    font-size: 20px;
+    width: 100%;
+    transition: 0.3s;
+}
+p{
+	margin:10px;
+	padding: 0;
+	font-weight: 600;
+}
+.btn-hover.btn_principal {
+	transition: 0.3s;
+    background-image: linear-gradient(to right,#fff, #fff, #fff, #fff);
+    box-shadow: 0 4px 15px 0 rgba(0,0,0, 0.25);
+}
+
+@media screen and (max-width: 600px){
+	#colonne_gauche{
+		display: none;
+	}
+	#colonne_droite{
+		width: 90%;
+		margin: 5%;
+		padding: 5%;
+	}
+i{
+	min-width: 30px;
+	text-align: center;
+}
+
+}

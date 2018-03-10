@@ -1,0 +1,184 @@
+#logo{
+	width: 200px;
+	padding: 20px;
+}
+header{
+	background-color: #fff;
+	box-shadow: 0 4px 15px 0 rgba(0,0,0, 0.25);
+}
+.fas,.fal{
+	color: #000;
+	width: 20px;
+}
+#sous_menu{
+	display: block;
+	width: 100%;
+	box-shadow: 0 4px 15px 0 rgba(0,0,0, 0.25);
+	padding: 20px;
+	margin-bottom: 30px;
+	overflow:auto;
+}
+.telephone{
+	width: 23%;
+	float: left;
+	margin: 1%;
+	padding: 1%;
+	transition: 0.3s;
+	border-radius: 20px;
+}
+.telephone img{
+	width: auto;
+	max-height: 300px;
+	display: block;
+	margin: auto;
+
+}
+.telephone h2, .telephone table{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+	margin: 0px 15px 20px 0px;
+	font-size: 30px;
+}
+.telephone table{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: 15px;
+
+}
+.telephone td{
+	padding: 5px;
+	padding-top:10px;
+}
+.telephone:hover, .caracteristiques{
+		box-shadow: 0 0px 15px 0 rgba(0,0,0, 0.35);
+		transform: scale(1.05);
+}
+#conteneur{
+	width: 90%;
+	margin: auto;
+	overflow: none;
+	  display: flex;
+  flex-wrap: wrap;
+}
+.close{
+	position:absolute;
+	top:10px;
+	right:10px;
+	background-color: #764ba2;
+	border-radius: 15px;
+	height: 25px;
+	width: 25px;
+	border:0;
+	color: #fff;
+	line-height:0px;
+	font-weight: 800;
+}
+
+
+.prix, .note{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+	margin: 10px;
+	margin-left: 0;
+	border: 2px solid #25aae1;
+	display: inline-block;
+	border-radius: 20px;
+	padding: 10px;
+	box-shadow: 0 0px 15px 0 rgba(0,0,0, 0.35);
+		
+}
+.bouton_sous_menu{
+	display: inline-block;
+	float: right;
+	border-radius: 40px;
+	background-image: linear-gradient(to right, #25aae1, #40e495);
+	box-shadow: 0 0px 15px 0 rgba(0,0,0, 0.35);
+	font-weight: 600;
+	font-size:  20px;
+
+}
+.bouton_sous_menu select,.bouton_sous_menu input {
+	margin: 10px 10px 10px 10px;
+	padding: 10px;
+	border: 0;
+}
+#recherche{
+	float: left;
+	padding: 30px;
+	border: 0;
+	background-image: linear-gradient(to right,#667eea, #764ba2);
+	box-shadow: 0 0px 15px 0 rgba(0,0,0, 0.35);
+	color: #fff;
+}
+.bouton_sous_menu p,i{display: inline;
+font-family: 'Montserrat', sans-serif;
+padding-left: 10px;
+color: #fff;
+}
+i{
+	padding-left: 0;
+	padding-right: 20px;
+}
+input[type="number"], select{
+	background-color: unset;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+	max-width: 100px;
+	background-color: rgba(0,0,0,0.1);
+}
+@media screen and (max-width: 1200px){
+	.telephone{
+		width: 48%;
+		padding-bottom: 30px;
+	}
+	#recherche{
+		width: 90%;
+		margin: 5%;
+		position: fixed;
+		bottom: 20px;
+		z-index: 1;
+	}
+	.bouton_sous_menu{
+		width: 42.5%;
+		margin: 2.5%;
+		padding:0;
+	}
+}
+@media screen and (max-width: 650px){
+
+	.telephone{
+		width: 98%;
+		padding-bottom: 30px;
+	}
+	#recherche{
+		width: 100%;
+		margin: 0%;
+		position: fixed;
+		bottom: 20px;
+		z-index: 1;
+	}
+	.bouton_sous_menu{
+		width: 90%;
+		margin: 5%;
+		padding:0;
+	}
+	#budget, #trier{
+		width: 90%;
+		margin: 20px 5%;
+		padding:0;
+	}
+	#sous_menu{
+		margin: 0;
+		padding:0;
+	}
+	.bouton_sous_menu{
+		margin: 0;
+		padding: 0;
+		border-radius: 20px;
+	}
+	.prix,.note{
+		font-size: 30px;
+	}
+}
