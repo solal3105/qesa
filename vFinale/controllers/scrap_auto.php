@@ -55,8 +55,9 @@ function getSpecs($collecteurLink){
         }
 
         $body = $html->find('span[data-spec=body-hl]',0)->plaintext;
-        $masse = before($body, "g,");
-        if (count_chars($masse) > 3) $masse = null;
+        $masse = before($body, "g");
+
+        if (strlen($masse) > 5) $masse = null;
         $specs[$i]['masse'] = $masse;
 
         $specs[$i]['epaisseur'] = between($body, ", ", "mm");
@@ -87,6 +88,11 @@ function getSpecs($collecteurLink){
         $specs[$i]['capaciteBatterie'] = before($batCapacity, " ");
         $batType = $html->find('div[data-spec=battype-hl]',0)->plaintext;
         $specs[$i]['typeBatterie'] = $batType;
+
+        $price = $html->find('td[data-spec=price]', 0)->plaintext;
+        $price = between($price, 'About ', ' EUR');
+        if (strlen($price) > 4) $price = null;
+        $specs[$i]['prix'] = $price;
 
         $imgUrl = $html->find('div[class=specs-photo-main] a img',0)->src;
         $specs[$i]['imgUrl'] = $imgUrl;
@@ -208,7 +214,8 @@ if(isset($_SESSION['userName'])) {
         $phones = recupPhones($nbTelToScrap, $links);
         $phonesTries = trierPhones($phones, $minRam, $minSize, $maxSize, $phonesExistants);
         $tels = getSpecs($phonesTries);
-        
+
+
         $nbTels = 0;
         $nbErreurs = 0;
 
@@ -244,7 +251,8 @@ if(isset($_SESSION['userName'])) {
         echo "<br>";
         echo $nbErreurs . " Erreurs";
 
-        var_dump($tels);
+        //var_dump($tels);
+
     }
 
 

@@ -121,9 +121,9 @@ class TelephoneDAO extends DAO{
 	public function addTel($t){
 		$ratio = $t['hauteurEcran'] / $t['largeurEcran'];
         $ratio = round($ratio, 2);
-		$param = array($t['marque'], $t['modele'], $t['annee'], $t['mois'], $t['masse'], $t['epaisseur'], $t['tailleEcran'], $t['largeurEcran'], $t['hauteurEcran'], $ratio, $t['typeOs'], $t['versionOs'], $t['processeur'], $t['memoireRam'],$t['resolutionCamera'],$t['capaciteBatterie'],$t['typeBatterie'],$t['capaciteStockage'],$t['cardSlot'], 0, 0, 1);
+		$param = array($t['marque'], $t['modele'], $t['annee'], $t['mois'], $t['masse'], $t['epaisseur'], $t['tailleEcran'], $t['largeurEcran'], $t['hauteurEcran'], $ratio, $t['typeOs'], $t['versionOs'], $t['processeur'], $t['memoireRam'],$t['resolutionCamera'],$t['capaciteBatterie'],$t['typeBatterie'],$t['capaciteStockage'],$t['cardSlot'], 0, 0, 1, $t['prix']);
 		
-		$this->ecrireDonnees("INSERT INTO `telephones` (`Fabricant`, `modele`, `annee_sortie`, `mois_sortie`, `masse`, `epaisseur`, `taille_ecran`, `largeur_ecran`, `hauteure_ecran`, `Ratio`, `OS`, `version_OS`, `cpu`, `ram`, `camera`, `capacite_batterie`, `type_batterie`, `memoire`, `carte_SD`, `pertinence`, `note`, `newTel`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ", $param);
+		$this->ecrireDonnees("INSERT INTO `telephones` (`Fabricant`, `modele`, `annee_sortie`, `mois_sortie`, `masse`, `epaisseur`, `taille_ecran`, `largeur_ecran`, `hauteure_ecran`, `Ratio`, `OS`, `version_OS`, `cpu`, `ram`, `camera`, `capacite_batterie`, `type_batterie`, `memoire`, `carte_SD`, `pertinence`, `note`, `newTel`, `prix`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ", $param);
 		
 	}
 

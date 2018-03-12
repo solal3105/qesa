@@ -28,10 +28,12 @@
 
 			<div class="telephone" id="tele<?= $value['ID'] ?>" onclick='AfficherCacher("carac<?= $value['ID'] ?>","tele<?= $value['ID'] ?>"); return false'>
 			<h2><?= $value['Fabricant'].' '.$value['modele'] ?></h2>
+
+            <!--
 			<img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6009/6009680_sd.jpg;maxHeight=1000;maxWidth=1000">
-			<!--
-			<img src="<?= PATHS_PHOTOS_PHONES . $value['Fabricant'] . "_" . $value['modele'] . "_hd.jpg" ?>">
 			-->
+			<img src="<?= PATHS_PHOTOS_PHONES . $value['Fabricant'] . "_" . $value['modele'] . "_hd.jpg" ?>">
+
 			<p class="prix">
 				<?php 
 				echo rand(150, 1100);
