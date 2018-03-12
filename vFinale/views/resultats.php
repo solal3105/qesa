@@ -11,7 +11,7 @@
 		<input type="button" class="bouton_sous_menu" value="Modifier les critères"  name="modifier la recherche" id="recherche" onclick="location.href='?page=personas';">
 		<div id="budget" class="bouton_sous_menu">
 			<p>Budget :</p>
-			<input type="number" name="budget" onclick="" step="5">
+			<input id="inputBudget" type="number" name="budget" onclick="" step="5">
 			<i class="fa fa-eur" aria-hidden="true"></i>
 		</div>
 		<div id="trier" class="bouton_sous_menu">
@@ -26,7 +26,7 @@
 		<?php
 		foreach ($tel as $key => $value) { ?>
 
-			<div class="telephone" id="tele<?= $value['ID'] ?>" onclick='AfficherCacher("carac<?= $value['ID'] ?>","tele<?= $value['ID'] ?>"); return false'>
+			<div class="telephone telephoneIdentifier" id="tele<?= $value['ID'] ?>" onclick='AfficherCacher("carac<?= $value['ID'] ?>","tele<?= $value['ID'] ?>"); return false'>
 			<h2><?= $value['Fabricant'].' '.$value['modele'] ?></h2>
 
             <!--
@@ -79,29 +79,47 @@
 	<br />
 
 </body>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript">
 
-		function AfficherCacher(carac,tele)
-		{
-			document.getElementsByClassName("caracteristiques").backgroundColor="red";
-			document.getElementById(carac).style.transition = "1s";
-			document.getElementById(tele).style.transition = "1s";
-			var test = document.getElementById(carac).style.display;
+    function AfficherCacher(carac,tele)
+    {
+        document.getElementsByClassName("caracteristiques").backgroundColor="red";
+        document.getElementById(carac).style.transition = "1s";
+        document.getElementById(tele).style.transition = "1s";
+        var test = document.getElementById(carac).style.display;
 
-			if (test == "block") //On passe à la page téléphone
-			{
-				setTimeout(function(){
-					document.getElementById(carac).style.display = "none";
-					document.getElementById(tele).style.display = "block";
-				}, 0);
-			}
-			else //On pase à la page caracteristique
-			{
-				setTimeout(function(){
-					document.getElementById(carac).style.display = "block";
-					document.getElementById(tele).style.display = "none";
-				}, 0);
-			}
-		}
+        if (test == "block") //On passe à la page téléphone
+        {
+            setTimeout(function(){
+                document.getElementById(carac).style.display = "none";
+                document.getElementById(tele).style.display = "block";
+            }, 0);
+        }
+        else //On pase à la page caracteristique
+        {
+            setTimeout(function(){
+                document.getElementById(carac).style.display = "block";
+                document.getElementById(tele).style.display = "none";
+            }, 0);
+        }
+    }
+
+    //Suppression des tels au dessus du budget
+    $("#inputBudget").change(function () {
+        var budget = parseInt($(this).val());
+        console.log(budget);
+        $(".telephoneIdentifier").each(function() {
+            var prix = parseInt($(this).context.getElementsByClassName("prix")[0].innerHTML.replace('€', '').trim());
+            if (prix > budget){
+               $(this).hide();
+            }
+            else {
+                $(this).show();
+            }
+        });
+    })
+
+
+
 </script>
