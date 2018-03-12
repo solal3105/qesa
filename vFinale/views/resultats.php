@@ -36,7 +36,7 @@
 
 			<p class="prix">
 				<?php 
-				echo rand(150, 1100);
+				echo $value['prix'];
 				echo "€";
 				?>
 			</p>
