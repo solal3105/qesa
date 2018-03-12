@@ -42,7 +42,11 @@ require_once(PATH_VIEWS."admin_menu.php");
 				</td>
 			</tr>
 			<tr>
-				
+				<td> Prix </td>
+                <td colspan="2">
+                    <input type="text" name="prix" value="<?= $tel['prix'] ?>">
+                </td>
+
 			</tr>
 		</table>
 		<h3>Dimensions</h3>

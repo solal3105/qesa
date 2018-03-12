@@ -96,7 +96,7 @@ class TelephoneDAO extends DAO{
     }
 
 	public function updateTel($tab,$idtel){
-		$this->queryRowIns("UPDATE telephones SET Fabricant = :fab, modele = :modele, annee_sortie = :annee, mois_sortie = :mois, masse = :masse, epaisseur = :epaisseur, taille_ecran = :taille, largeur_ecran = :largeur, hauteure_ecran = :hauteur, OS = :os, version_OS = :version, cpu = :cpu, ram = :ram, camera = :cam, capacite_batterie = :capac, type_batterie = :type, memoire = :mem, carte_SD = :sd WHERE ID = :id", array(
+		$this->queryRowIns("UPDATE telephones SET Fabricant = :fab, modele = :modele, annee_sortie = :annee, mois_sortie = :mois, masse = :masse, epaisseur = :epaisseur, taille_ecran = :taille, largeur_ecran = :largeur, hauteure_ecran = :hauteur, OS = :os, version_OS = :version, cpu = :cpu, ram = :ram, camera = :cam, capacite_batterie = :capac, type_batterie = :type, memoire = :mem, carte_SD = :sd, prix = :prix WHERE ID = :id", array(
 				'fab' => $tab['Fabricant'],
 				'modele' => $tab['modele'],
 				'annee' => $tab['annee_sortie'],
@@ -115,6 +115,7 @@ class TelephoneDAO extends DAO{
 				'type' => $tab['type_batterie'],
 				'mem' => $tab['memoire'],
 				'sd' => $tab['carte_SD'],
+				'prix' => $tab['prix'],
 				'id' => $idtel));
 	}
 
