@@ -122,6 +122,10 @@ font-family: 'Montserrat', sans-serif;
 padding-left: 10px;
 color: #fff;
 }
+.photoPhone{
+	max-width: 100%;
+}
+
 i{
 	padding-left: 0;
 	padding-right: 20px;

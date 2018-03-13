@@ -32,7 +32,7 @@
             <!--
 			<img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6009/6009680_sd.jpg;maxHeight=1000;maxWidth=1000">
 			-->
-			<img src="<?= PATHS_PHOTOS_PHONES . $value['Fabricant'] . "_" . $value['modele'] . "_hd.jpg" ?>">
+			<img class="photoPhone" src="<?= PATHS_PHOTOS_PHONES . $value['Fabricant'] . "_" . $value['modele'] . "_hd.jpg" ?>">
 
 			<p class="prix">
 				<?php 
