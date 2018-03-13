@@ -1,20 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
+-- version 4.6.5.1
 -- https://www.phpmyadmin.net/
 --
--- Client :  127.0.0.1
--- Généré le :  Dim 21 Janvier 2018 à 16:14
--- Version du serveur :  5.7.14
--- Version de PHP :  5.6.25
+-- Client :  localhost:8889
+-- Généré le :  Mar 13 Mars 2018 à 08:42
+-- Version du serveur :  5.6.34
+-- Version de PHP :  7.1.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Base de données :  `qeza_tests`
@@ -51,8 +45,8 @@ CREATE TABLE `telephones` (
   `largeur_ecran` int(4) DEFAULT NULL,
   `hauteure_ecran` int(4) DEFAULT NULL,
   `Ratio` varchar(11) DEFAULT NULL,
-  `OS` varchar(20) DEFAULT NULL,
-  `version_OS` varchar(20) DEFAULT NULL,
+  `OS` varchar(13) DEFAULT NULL,
+  `version_OS` varchar(6) DEFAULT NULL,
   `cpu` varchar(19) DEFAULT NULL,
   `ram` varchar(5) DEFAULT NULL,
   `camera` varchar(5) DEFAULT NULL,
@@ -62,7 +56,8 @@ CREATE TABLE `telephones` (
   `carte_SD` varchar(34) DEFAULT NULL,
   `pertinence` tinyint(1) NOT NULL,
   `note` int(1) NOT NULL DEFAULT '0',
-  `newTel` tinyint(1) NOT NULL
+  `newTel` tinyint(1) NOT NULL,
+  `prix` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -119,7 +114,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `telephones`
 --
 ALTER TABLE `telephones`
-  MODIFY `ID` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1049;
+  MODIFY `ID` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=880;
 --
 -- AUTO_INCREMENT pour la table `users`
 --
@@ -134,7 +129,3 @@ ALTER TABLE `users`
 --
 ALTER TABLE `notes`
   ADD CONSTRAINT `fk_idtel` FOREIGN KEY (`id`) REFERENCES `telephones` (`ID`);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
