@@ -25,14 +25,25 @@
 <div id="conteneur">
 		<?php
 		foreach ($tel as $key => $value) { ?>
-
 			<div class="telephone telephoneIdentifier" id="tele<?= $value['ID'] ?>" onclick='AfficherCacher("carac<?= $value['ID'] ?>","tele<?= $value['ID'] ?>"); return false'>
 			<h2><?= $value['Fabricant'].' '.$value['modele'] ?></h2>
 
-            <!--
-			<img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6009/6009680_sd.jpg;maxHeight=1000;maxWidth=1000">
-			-->
-			<img class="photoPhone" src="<?= PATHS_PHOTOS_PHONES . $value['Fabricant'] . "_" . $value['modele'] . "_hd.jpg" ?>">
+            
+			
+			
+			<?php 
+			if (file_exists(PATHS_PHOTOS_PHONES . $value['Fabricant'] . "_" . $value['modele'] . "_hd.jpg")) {
+				?>
+					<img class="photoPhone" src="<?= PATHS_PHOTOS_PHONES . $value['Fabricant'] . "_" . $value['modele'] . "_hd.jpg" ?>">
+				<?php
+			}
+			else{
+				?>
+					<img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6009/6009680_sd.jpg;maxHeight=1000;maxWidth=1000">
+				<?php
+			}
+			?>
+			
 
 			<p class="prix">
 				<?php 
