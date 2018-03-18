@@ -8,18 +8,11 @@
 </header>
 <body>
 	<div id="sous_menu">
-		<input type="button" class="bouton_sous_menu" value="Modifier les critères"  name="modifier la recherche" id="recherche" onclick="location.href='?page=personas';">
-		<div id="budget" class="bouton_sous_menu">
-			<p>Budget :</p>
-			<input id="inputBudget" type="number" name="budget" onclick="" step="5">
+		<img id="recherche" src="<?= PATH_IMAGES ?>sliders_logo.png" onclick="location.href='?page=personas';">
+		<div id="budget">
+			<label>Budget :</label>
+			<input type="number" id="inputBudget" name="budget" onclick="" step="5">
 			<i class="fa fa-eur" aria-hidden="true"></i>
-		</div>
-		<div id="trier" class="bouton_sous_menu">
-			<p>Trier par :</p>
-			<select name="trier">
-				<option value="prix">Prix</option>
-				<option value="note" selected>Note</option>
-			</select>
 		</div>
 	</div>
 <div id="conteneur">
@@ -32,9 +25,9 @@
 			
 			
 			<?php 
-			if (file_exists(PATHS_PHOTOS_PHONES . $value['Fabricant'] . "_" . $value['modele'] . "_hd.jpg")) {
+			if (file_exists(PATHS_PHOTOS_PHONES . $value['Fabricant'] . "_" . $value['modele'] . "_sd.jpg")) {
 				?>
-					<img class="photoPhone" src="<?= PATHS_PHOTOS_PHONES . $value['Fabricant'] . "_" . $value['modele'] . "_hd.jpg" ?>">
+					<img class="photoPhone" src="<?= PATHS_PHOTOS_PHONES . $value['Fabricant'] . "_" . $value['modele'] . "_sd.jpg" ?>">
 				<?php
 			}
 			else{
@@ -45,13 +38,13 @@
 			?>
 			
 
-			<p class="prix">
+			<div class="prix">
 				<?php 
 				echo $value['prix'];
 				echo "€";
 				?>
-			</p>
-			<p class="note"><?= (int)($notesFinales[$value['ID']]*10)/10 ?>/10</p>
+			</div>
+			<div class="note"><?= (int)($notesFinales[$value['ID']]*10)/10 ?>/10</div>
 			</div>
 
 			<div class="caracteristiques telephone" id="carac<?= $value['ID'] ?>" style="display:none" onclick='AfficherCacher("carac<?= $value['ID'] ?>","tele<?= $value['ID'] ?>"); return false'>
@@ -60,11 +53,11 @@
 				<table>
 					<tr>
 						<td><i class="fas fa-square"></i>RAM</td>
-						<td><?= $value['ram'] . " GO"?></td>
+						<td><?= $value['ram'] . " Go"?></td>
 					</tr>
 					<tr>
 						<td><i class="fas fa-rocket"></i>Stockage</td>
-						<td><?= $value['memoire'] . " GO"?></td>
+						<td><?= $value['memoire'] . " Go"?></td>
 					</tr>
 					<tr>
 						<td><i class="fas fa-bolt"></i>Processeur</td>
@@ -72,7 +65,7 @@
 					</tr>
 					<tr>
 						<td><i class="fas fa-mobile"></i>écran</td>
-						<td><?= $value['taille_ecran'] . ' "' ?></td>
+						<td><?= $value['taille_ecran'] . '"' ?></td>
 					</tr>
 					<tr>
 						<td><i class="fas fa-expand-arrows-alt"></i>Ratio</td>
@@ -80,7 +73,11 @@
 					</tr>
 					<tr>
 						<td><i class="fas fa-weight"></i>Poids</td>
-						<td><?= $value['masse'] . " g"?></td>
+						<td><?= $value['masse'] . "g"?></td>
+					</tr>
+					<tr>
+						<td><i class="fa fa-eur"></i>prix</td>
+						<td><?= $value['prix'] . "€"?></td>
 					</tr>
 				</table>
 
@@ -131,6 +128,18 @@
         });
     })
 
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("sous_menu");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
 
 
 </script>

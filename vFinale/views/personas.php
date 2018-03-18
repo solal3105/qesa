@@ -16,6 +16,7 @@
 		<input type="hidden" name="persona" value="<?= $_POST['persona'] ?>" id="persona">
 	</form>
 </div>-->
+<img src="<?= PATH_IMAGES ?>logo_grand_transparent.png" id="logo">
 <div id="colonne_droite">
 	<h1>Il vous reste 
 		<input name="sum" type="text" value="0" id="result" size="1" readonly>
