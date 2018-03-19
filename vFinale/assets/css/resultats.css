@@ -39,6 +39,7 @@ header{
 	border-radius: 20px;
 	border: 1px solid #ddd;
 	background-color: #fff;
+	text-align: center;
 }
 .telephone img{
 	width: auto;
@@ -141,6 +142,11 @@ label{
 
 .photoPhone{
 	max-width: 100%;
+}
+
+.footerPhone{
+	display: inline-block;
+	margin-top: 20px;
 }
 
 i{

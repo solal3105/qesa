@@ -100,7 +100,7 @@ function getSpecs($collecteurLink){
         $lien2 = $html->find('div[class=specs-photo-main] a',0)->href;
         $lien2 = 'http://www.gsmarena.com/' . $lien2;
         $htmlPhoto = file_get_html($lien2);
-        $image2Url = $htmlPhoto->find('div[id=pictures-list] p img',0)->src;
+        $image2Url = $htmlPhoto->find('div[id=pictures-list] img',0)->src;
         $specs[$i]['imgUrl2'] = $image2Url;
         $i++;
     }
