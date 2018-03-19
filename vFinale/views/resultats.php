@@ -37,7 +37,7 @@
 			}
 			else{
 				?>
-					<img class="photoPhone" src="<?= PATH_IMAGES . "smartphone.png" ?>">
+					<img class="photoPhone" src="<?= PATH_IMAGES . "smartphone-2.png" ?>">
 				<?php
 			}
 			?>
