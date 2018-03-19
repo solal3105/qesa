@@ -11,7 +11,7 @@
 		<img id="recherche" src="<?= PATH_IMAGES ?>sliders_logo.png" onclick="location.href='?page=personas';">
 		<div id="budget">
 			<label>Budget :</label>
-			<input type="number" id="inputBudget" name="budget" onclick="" step="5">
+			<input type="number" id="inputBudget" name="budget" onclick="" step="50">
 			<i class="fa fa-eur" aria-hidden="true"></i>
 		</div>
 	</div>
@@ -131,13 +131,16 @@
 window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("sous_menu");
+var content = document.getElementById("conteneur");
 var sticky = header.offsetTop;
 
 function myFunction() {
   if (window.pageYOffset >= sticky) {
-    header.classList.add("sticky");
+    header.classList.add("stickyheader");
+    content.classList.add("stickycontent");
   } else {
-    header.classList.remove("sticky");
+    header.classList.remove("stickyheader");
+    content.classList.remove("stickycontent");
   }
 }
 
