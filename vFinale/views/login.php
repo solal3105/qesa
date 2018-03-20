@@ -1,6 +1,8 @@
 <?php require_once(PATH_VIEWS.'admin_header.php');?>
 
 
+<div class="connexion">
+
     <!--  Zone message d'alerte -->
     <?php require_once(PATH_VIEWS.'alert.php');?>
 
@@ -24,6 +26,6 @@
     <input class="btn btn-primary" type="submit" name="btonSubmit" value="Connexion">
 </form>
 
-
+</div>
     <!--  Pied de page -->
 <?php require_once(PATH_VIEWS.'footer.php');

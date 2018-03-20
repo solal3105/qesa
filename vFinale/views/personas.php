@@ -16,11 +16,13 @@
 		<input type="hidden" name="persona" value="<?= $_POST['persona'] ?>" id="persona">
 	</form>
 </div>-->
-<img src="<?= PATH_IMAGES ?>logo_grand_transparent.png" id="logo">
+<a href="index.php" >
+	<img src="<?= PATH_IMAGES ?>logo_grand_transparent.png" id="logo" >
+</a>
 <div id="colonne_droite">
 	<h1>Il vous reste 
 		<input name="sum" type="text" value="0" id="result" size="1" readonly>
-	points</h1>
+	points à attribuer</h1>
 	<form method="post" action="?page=resultats">
 	<h2><i class="fa fa-camera" aria-hidden="true"></i> Photographie</h2>
      <input name="photo" id="op1" value="<?= $_SESSION['photographie']; ?>" onChange='calcPts("op1","op2","op3","result");disable(document.getElementById("rechercher"));' type="range" min="0" max="10" data-highlight="true"> 
@@ -47,15 +49,23 @@
 
     		document.getElementById("rechercher").style.backgroundImage= "linear-gradient(to right,#eee, #eee, #eee, #eee)";
     		document.getElementById("rechercher").style.color= "grey";
-    		document.getElementById("result").style.color= "red";
+    		document.getElementById("result").style.color= "#e45e97"; //Rouge - rose de la charte graphique
     		document.getElementById("result").style.transform = "scale(1.3)";
     	}
-    	if(document.getElementById('result').value>=0){
+    	if(document.getElementById('result').value>0){
     		document.getElementById("rechercher").style.backgroundImage= "linear-gradient(to right,#667eea, #764ba2)";
     		document.getElementById("rechercher").style.color= "white";
       		document.getElementById("result").style.color= "black";
     		document.getElementById("result").style.transform = "scale(1.0)";
     		btn.disabled = false;
+    	}
+    	if (document.getElementById('result').value == 0) {
+    		btn.disabled = false;
+
+    		document.getElementById("rechercher").style.backgroundImage= "linear-gradient(to right,#667eea, #764ba2)";
+    		document.getElementById("rechercher").style.color= "white";
+    		document.getElementById("result").style.color= "#90d051"; //Vert de la charte graphique
+    		document.getElementById("result").style.transform = "scale(1.3)";
     	}
 
     }

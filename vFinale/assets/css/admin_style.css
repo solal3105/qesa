@@ -98,3 +98,10 @@ table{
 .boutons-table{
 	margin-left: 40px;
 }
+
+.connexion{
+    margin-left: 5%;
+    max-width: 1000px;
+    margin-right: 5%;
+    margin-top: 3%;
+}
