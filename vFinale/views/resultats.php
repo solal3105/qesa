@@ -3,12 +3,14 @@
 	<link href="<?= PATH_CSS ?>resultats.css" rel="stylesheet">
 </head> 
 <!--  Début de la page -->
-<header>
-	<img src="assets\images\logo_grand_transparent.png" id="logo">
-</header>
+<a href="index.php" >
+	<img src="<?= PATH_IMAGES ?>logo_grand_transparent.png" id="logo" >
+</a>
 <body>
 	<div id="sous_menu">
-		<img id="recherche" src="<?= PATH_IMAGES ?>sliders_logo.png" onclick="location.href='?page=personas';">
+		<a href="index.php?page=personas">
+			<img id="recherche" src="<?= PATH_IMAGES . "sliders_logo.png" ?>" >
+		</a>
 		<div id="budget">
 			<label>Budget :</label>
 			<input type="number" id="inputBudget" name="budget" onclick="" step="50">

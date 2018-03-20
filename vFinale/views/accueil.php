@@ -13,7 +13,7 @@
   <div class="screen">	<div id="cadre">
 		<div id="contenu">
 			<img src="assets\images\logo_grand_transparent.png" id="logo">
-			<h1>Que doit être le point fort de votre téléphone ?</h1>
+			<h1>Quel doit être le point fort de votre téléphone ?</h1>
 			<form method="post" action="?page=personas" id="formulaire">
 				<input type="button" class="btn-hover btn_secondaire" value="la photographie"  name="photographie" onclick="subForm(1);"><br>
 				<input type="button" class="btn-hover btn_secondaire" value="l'autonomie" name="autonomie" onclick="subForm(2);"><br>
