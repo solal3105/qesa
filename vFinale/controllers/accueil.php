@@ -2,7 +2,7 @@
 
 
 if (!isset($_POST['persona'])){
-	$_POST['persona'] = 0;
+	$_POST['persona'] = 'personnalise';
 }
 
 require_once(PATH_VIEWS.'accueil.php');

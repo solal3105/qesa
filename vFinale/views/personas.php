@@ -13,7 +13,7 @@
 		<input type="button" class="btn-hover btn_secondaire" value="l'autonomie" name="autonomie" onclick="subForm(2);">
 			<input type="button" class="btn-hover btn_secondaire" value="la performance" name="performance" onclick="subForm(3);">
 			<input type="button" class="btn-hover btn_secondaire" value="Sans préférences" name="personnalise" onclick="subForm(4);">
-		<input type="hidden" name="persona" value="<?= $_POST['persona'] ?>" id="persona">
+		<input type="hidden" name="persona" value="<?php // echo $_POST['persona'] ?> " id="persona">
 	</form>
 </div>-->
 <a href="index.php" >

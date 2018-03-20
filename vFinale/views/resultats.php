@@ -6,6 +6,7 @@
 <a href="index.php" >
 	<img src="<?= PATH_IMAGES ?>logo_grand_transparent.png" id="logo" >
 </a>
+
 <body>
 	<div id="sous_menu">
 		<a href="index.php?page=personas">
@@ -23,9 +24,7 @@
 			<div class="telephone telephoneIdentifier" id="tele<?= $value['ID'] ?>" onclick='AfficherCacher("carac<?= $value['ID'] ?>","tele<?= $value['ID'] ?>"); return false'>
 			<h2><?= $value['Fabricant'].' '.$value['modele'] ?></h2>
 
-            
-			
-			
+
 			<?php 
 			if (file_exists(PATHS_PHOTOS_PHONES . $value['Fabricant'] . "_" . $value['modele'] . "_hd.jpg")) {
 				?>
@@ -139,7 +138,7 @@
                 $(this).show();
             }
         });
-    })
+    });
 
 window.onscroll = function() {myFunction()};
 

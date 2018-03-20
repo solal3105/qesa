@@ -1,9 +1,16 @@
 <?php
 require_once(PATH_MODELS.'TelephoneDAO.php');
+var_dump($_SESSION);
+if (!empty($_POST)){
+    $_SESSION['photographie'] = $_POST['photo'];
+    $_SESSION['autonomie'] = $_POST['auto'];
+    $_SESSION['performance'] = $_POST['perf'];
 
-$_SESSION['photographie'] = $_POST['photo'];
-$_SESSION['autonomie'] = $_POST['auto'];
-$_SESSION['performance'] = $_POST['perf'];
+    header('Location: index.php?page=resultats');
+    exit;
+}
+
+
 
 $totalNoteUser = $_SESSION['photographie']+$_SESSION['autonomie']+$_SESSION['performance'];
 $telephone = new TelephoneDAO(1);
