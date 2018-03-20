@@ -57,7 +57,12 @@ header{
 	margin-left: auto;
 	margin-right: auto;
 }
+.telephone table{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: 15px;
 
+}
 .telephone h2{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
